@@ -1,0 +1,21 @@
+{
+    "name": "dynamics-365ce-javascript-snippets",
+    "displayName": "Dynamics 365CE Javascript Snippets",
+    "description": "Javascript snippets for Dynamics 365 Customer Engagement",
+    "version": "1.0.0",
+    "publisher": "Arsen Aghajanyan",
+    "engines": {
+        "vscode": "^1.31.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}
