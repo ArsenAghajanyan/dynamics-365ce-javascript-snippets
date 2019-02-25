@@ -19,7 +19,31 @@
         "snippets": [
             {
                 "language": "javascript",
-                "path": "./snippets/snippets.json"
+                "path": "./snippets/xrm_webapi.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/xrm_navigation.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/xrm_panel.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/xrm_encoding.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/xrm_utility.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/executioncontext.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/attributes.json"
             }
         ]
     }

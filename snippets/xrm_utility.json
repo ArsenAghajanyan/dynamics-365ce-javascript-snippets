@@ -1,0 +1,79 @@
+[
+    {
+        "Close Progress Indicator": {
+            "prefix": "XrmUtilityCloseProgressIndicator",
+            "description": "Closes a progress dialog box.",
+            "body": [
+                "Xrm.Utility.closeProgressIndicator();"
+            ]
+        }
+    },
+    {
+        "Get Allowed Status Transitions": {
+            "prefix": "XrmUtilityGetAllowedStatusTransitions",
+            "description": "Returns the valid state transitions for the specified entity type and state code.",
+            "body": [
+                "Xrm.Utility.getAllowedStatusTransitions(\"${1:account}\", ${2:690970000}).then(",
+                "\tfunction success(result) {",
+                "\t\t// perform operations",
+                "\t\t$0",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    },
+    {
+        "Get Entity Metadata": {
+            "prefix": "XrmUtilityGetEntityMetadata",
+            "description": "Returns the entity metadata for the specified entity.",
+            "body": [
+                "Xrm.Utility.getEntityMetadata(\"${1:account}\", [ \"${2:name}\" ]).then(",
+                "\tfunction success(result) {",
+                "\t\t// perform operations",
+                "\t\t$0",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    },
+    {
+        "Get Learning Path Attribute Name": {
+            "prefix": "XrmUtilityGetLearningPathAttributeName",
+            "description": "Returns the name of the DOM attribute expected by the Learning Path (guided help) Content Designer for identifying UI controls in the Dynamics 365 for Customer Engagement apps form.",
+            "body": [
+                "Xrm.Utility.getLearningPathAttributeName();"
+            ]
+        }
+    },
+    {
+        "Refresh Parent Grid": {
+            "prefix": "XrmUtilityRefreshParentGrid",
+            "description": "Refreshes the parent grid containing the specified record.",
+            "body": [
+                "var lookupOptions = {",
+                "\tentityType: \"${1:entityType}\",",
+                "\tid: ${2:id},",
+                "\tname: \"${3:name}\",",
+                "};",
+                "Xrm.Utility.refreshParentGrid(lookupOptions);"
+            ]
+        }
+    },
+    {
+        "Show Progress Indicator": {
+            "prefix": "XrmUtilityShowProgressIndicator",
+            "description": "Displays a progress dialog with the specified message.",
+            "body": [
+                "Xrm.Utility.showProgressIndicator(\"{1:message}\");"
+            ]
+        }
+    }
+]

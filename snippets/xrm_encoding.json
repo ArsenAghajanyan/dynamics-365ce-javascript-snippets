@@ -1,0 +1,47 @@
+[
+    {
+        "Html Attribute Encode": {
+            "prefix": "XrmEncodingHtmlAttributeEncode",
+            "description": "Encodes the specified string so that it can be used in an HTML attribute.",
+            "body": [
+                "Xrm.Encoding.htmlAttributeEncode(${1:arg});"
+            ]
+        }
+    },
+    {
+        "Html Decode": {
+            "prefix": "XrmEncodingHtmlDecode",
+            "description": "Converts a string that has been HTML-encoded into a decoded string.",
+            "body": [
+                "Xrm.Encoding.htmlDecode(${1:arg});"
+            ]
+        }
+    },
+    {
+        "Html Encode": {
+            "prefix": "XrmEncodingHtmlEncode",
+            "description": "Converts a string to an HTML-encoded string.",
+            "body": [
+                "Xrm.Encoding.htmlEncode(${1:arg});"
+            ]
+        }
+    },
+    {
+        "Xml Attribute Encode": {
+            "prefix": "XrmEncodingXmlAttributeEncode",
+            "description": "Encodes the specified string so that it can be used in an XML attribute.",
+            "body": [
+                "Xrm.Encoding.xmlAttributeEncode(${1:arg});"
+            ]
+        }
+    },
+    {
+        "Xml Encode": {
+            "prefix": "XrmEncodingXmlEncode",
+            "description": "Converts a string to an XML-encoded string.",
+            "body": [
+                "Xrm.Encoding.xmlEncode(${1:arg});"
+            ]
+        }
+    }
+]
