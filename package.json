@@ -4,6 +4,11 @@
     "description": "Javascript snippets for Dynamics 365 Customer Engagement",
     "version": "1.0.0",
     "publisher": "Arsen Aghajanyan",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ArsenAghajanyan/dynamics-365ce-javascript-snippets"
+    },
+    "icon": "extras\\dynamics_365_icon.png",
     "engines": {
         "vscode": "^1.31.0"
     },

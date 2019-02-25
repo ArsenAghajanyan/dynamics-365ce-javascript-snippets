@@ -1,1 +1,139 @@
-{}
+[
+    {
+        "Create Record": {
+            "prefix": "XrmWebApiCreateRecord",
+            "description": "Creates an entity record.",
+            "body": [
+                "Xrm.WebApi.createRecord(\"${1:account}\", ${2:data}).then(",
+                "\tfunction success(result) {",
+                "\t\t// perform operations on record creation",
+                "\t\t$0",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    },
+    {
+        "Delete Record": {
+            "prefix": "XrmWebApiDeleteRecord",
+            "description": "Deletes an entity record.",
+            "body": [
+                "Xrm.WebApi.deleteRecord(\"${1:account}\", ${2:id}).then(",
+                "\tfunction success(result) {",
+                "\t\t// perform operations on record deletion",
+                "\t\t$0",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    },
+    {
+        "Retrieve Record": {
+            "prefix": "XrmWebApiRetrieveRecord",
+            "description": "Retrieves an entity record.",
+            "body": [
+                "Xrm.WebApi.retrieveRecord(\"${1:account}\", ${2:id}, ${3:options}).then(",
+                "\tfunction success(result) {",
+                "\t\t// perform operations on record retrieval",
+                "\t\t$0",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    },
+    {
+        "Retrieve Multiple Records": {
+            "prefix": "XrmWebApiRetrieveMultipleRecords",
+            "description": "Retrieves a collection of entity records.",
+            "body": [
+                "Xrm.WebApi.retrieveMultipleRecords(\"${1:account}\", ${2:options}, ${3:maxPageSize}).then(",
+                "\tfunction success(result) {",
+                "\t\t// perform operations on on retrieved records",
+                "\t\t$0",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    },
+    {
+        "Update Record": {
+            "prefix": "XrmWebApiUpdateRecord",
+            "description": "Updates an entity record.",
+            "body": [
+                "Xrm.WebApi.createRecord(\"${1:account}\", ${2:id}, ${3:data}).then(",
+                "\tfunction success(result) {",
+                "\t\t// perform operations on record update",
+                "\t\t$0",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    },
+    {
+        "Is Available Offline": {
+            "prefix": "XrmWebApiIsAvailableOffline",
+            "description": "Returns a boolean value indicating whether an entity is present in user’s profile and is currently available for use in offline mode.",
+            "body": [
+                "Xrm.WebApi.offline.isAvailableOffline(\"${1:account}\");"
+            ]
+        }
+    },
+    {
+        "Execute Action": {
+            "prefix": "XrmWebApiExecute",
+            "description": "Execute a single action, function, or CRUD operation.",
+            "body": [
+                "Xrm.WebApi.online.execute(${1:request}).then(",
+                "\tfunction success(result) {",
+                "\t\tif (result.ok) {",
+                "\t\t\t// perform operations as required",
+                "\t\t\t$0",
+                "\t\t}",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    },
+    {
+        "Execute Multiple Actions": {
+            "prefix": "XrmWebApiExecuteMultiple",
+            "description": "Execute a single action, function, or CRUD operation.",
+            "body": [
+                "Xrm.WebApi.online.executeMultiple(${1:requests}).then(",
+                "\tfunction success(results) {",
+                "\t\t// perform operations as required",
+                "\t\t$0",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    }
+]
