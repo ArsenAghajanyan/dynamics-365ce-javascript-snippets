@@ -1,7 +1,7 @@
 [
     {
         "Attribute Add On Change": {
-            "prefix": "FormContextAttributeAddOnChange",
+            "prefix": "FormContextAttributesAddOnChange",
             "description": "Sets a function to be called when the OnChange event occurs.",
             "body": [
                 "formContext.getAttribute(\"${1:fieldName}\").addOnChange(${2:myFunction});"

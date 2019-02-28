@@ -19,23 +19,23 @@
         "snippets": [
             {
                 "language": "javascript",
-                "path": "./snippets/xrm_webapi.json"
+                "path": "./snippets/xrm-webapi.json"
             },
             {
                 "language": "javascript",
-                "path": "./snippets/xrm_navigation.json"
+                "path": "./snippets/xrm-navigation.json"
             },
             {
                 "language": "javascript",
-                "path": "./snippets/xrm_panel.json"
+                "path": "./snippets/xrm-panel.json"
             },
             {
                 "language": "javascript",
-                "path": "./snippets/xrm_encoding.json"
+                "path": "./snippets/xrm-encoding.json"
             },
             {
                 "language": "javascript",
-                "path": "./snippets/xrm_utility.json"
+                "path": "./snippets/xrm-utility.json"
             },
             {
                 "language": "javascript",
@@ -44,6 +44,22 @@
             {
                 "language": "javascript",
                 "path": "./snippets/attributes.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/controls.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/xrm-device.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/formcontext-data.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/process.json"
             }
         ]
     }

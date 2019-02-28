@@ -1,0 +1,467 @@
+[
+    {
+        "Control Add Custom Filter": {
+            "prefix": "FormContextControlAddCustomFilter",
+            "description": "Adds filters to the results displayed in the lookup. Each filter will be combined with any previously added filters as an “AND” condition.",
+            "body": [
+                "var entityName = '${1:account}';",
+                "var filter = '<filter type='and'><condition attribute='address1_city' operator='eq' value='Redmond' /></filter>';",
+                "",
+                "formContext.getControl('${2:fieldName}').addCustomFilter(filter, entityName)"
+            ]
+        }
+    },
+    {
+        "Control Add Custom View": {
+            "prefix": "FormContextControlAddCustomView",
+            "description": "Adds a new view for the lookup dialog box.",
+            "body": [
+                "var viewId = '${1:00000000-0000-0000-0000-000000000001}';",
+                "var entityName = '${2:account}';",
+                "var viewDisplayName = '${3:Custom View}';",
+                "var fetchXml = \"<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false'>\" +",
+                "\t\"<entity name='account'>\" +",
+                "\t\t\"<attribute name='name' />\" +",
+                "\t\t\"<attribute name='accountid' />\" +",
+                "\t\t\"<filter type='and'>\" +",
+                "\t\t\t\"<condition attribute='address1_city' operator='eq' value='Redmond' />\" +",
+                "\t\t\"</filter>\" +",
+                "\t\"</entity>\" +",
+                "\"</fetch>\";",
+                "",
+                "var layoutXml = \"<grid name='resultset' object='1' jump='accountid' select='1' icon='1' preview='1'>\" +",
+                "\t\"<row name='result' id='accountid'>\" +",
+                "\t\t\"<cell name='name' width='150' />\" +",
+                "\t\"</row>\" +",
+                "\"</grid>\";",
+                "var isDefault = ${4:true|false};",
+                "",
+                "Xrm.Page.getControl(''${5:fieldname}').addCustomView(viewId, entityName, viewDisplayName, fetchXml, layoutXml, isDefault);"
+            ]
+        }
+    },
+    {
+        "Control Add Notification": {
+            "prefix": "FormContextControlAddNotification",
+            "description": "Displays an error or recommendation notification for a control, and lets you specify actions to execute based on the notification. When you specify an error type of notification, a red \"X\" icon appears next to the control. When you specify a recommendation type of notification, an \"i\" icon appears next to the control. On Dynamics 365 for Customer Engagement apps mobile clients, tapping on the icon will display the message, and let you perform the configured action by clicking the Apply button or dismiss the message.",
+            "body": [
+                "var actionCollection = {",
+                "\tmessage: '${1:Notification body message}',",
+                "\tactions: null",
+                "};",
+                "",
+                "actionCollection.actions = [function() {",
+                "\t$0",
+                "}];",
+                "",        
+                "formContext.getControl('${2:fieldName}').addNotification({",
+                "\tmessages: ['${3:Notification title}'],",
+                "\tnotificationLevel: '${4:RECOMMENDATION|ERROR}',",
+                "\tuniqueId: '${5:notification_unique_id}',",
+                "\tactions: [actionCollection]",
+                "});"
+            ]
+        }
+    },
+    {
+        "Control Add On Post Search": {
+            "prefix": "FormContextControlAddOnPostSearch",
+            "description": "Adds an event handler to the PostSearch event.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').addOnPostSearch(${2:myFunction});"
+            ]
+        }
+    },
+    {
+        "Control Add On Result Opened": {
+            "prefix": "FormContextControlAddOnResultOpened",
+            "description": "Adds an event handler to the OnResultOpened event.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').addOnResultOpened(${2:myFunction});"
+            ]
+        }
+    },
+    {
+        "Control Add On Selection": {
+            "prefix": "FormContextControlAddOnSelection",
+            "description": "Adds an event handler to the OnSelection event.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').addOnSelection(${2:myFunction});"
+            ]
+        }
+    },
+    {
+        "Control Add Option": {
+            "prefix": "FormContextControlAddOption",
+            "description": "Adds an option to a control.",
+            "body": [
+                "var option = {",
+                "\ttext: '${1:my option}'",
+                "\tvalue: ${2:690970000}",
+                "};",
+                "",
+                "formContext.getControl('${3:fieldName}')..addOption(option, ${4:index});"
+            ]
+        }
+    },
+    {
+        "Control Add Pre Search": {
+            "prefix": "FormContextControlAddPreSearch",
+            "description": "Applies changes to lookups based on values current just as the user is about to view results for the lookup.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').addPreSearch(${2:myFunction});"
+            ]
+        }
+    },
+    {
+        "Control Clear Notification": {
+            "prefix": "FormContextControlClearNotification",
+            "description": "Remove a message already displayed for a control.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').clearNotification('${notification_unique_id}');"
+            ]
+        }
+    },
+    {
+        "Control Clear Options": {
+            "prefix": "FormContextControlClearOptions",
+            "description": "Clears all options from a control.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').clearOptions();"
+            ]
+        }
+    },
+    {
+        "Control Get Attribute": {
+            "prefix": "FormContextControlGetAttribute",
+            "description": "Returns the attribute that the control is bound to.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').getAttribute();"
+            ]
+        }
+    },
+    {
+        "Get Control": {
+            "prefix": "FormContextGetControl",
+            "description": "Gets a control on the form.",
+            "body": [
+                "formContext.getControl('${1:fieldName}');"
+            ]
+        }
+    },
+    {
+        "Control Get Control Type": {
+            "prefix": "FormContextControlGetControlType",
+            "description": "Returns a value that categorizes Control.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').getControlType();"
+            ]
+        }
+    },
+    {
+        "Control Get Data": {
+            "prefix": "FormContextControlGetData",
+            "description": "Returns the value of the data query string parameter passed to a Silverlight web resource.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').getData();"
+            ]
+        }
+    },
+    {
+        "Control Get Default View": {
+            "prefix": "FormContextControlGetDefaultView",
+            "description": "Returns the ID value of the default lookup dialog view.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').getDefaultView();"
+            ]
+        }
+    },
+    {
+        "Control Get Disabled": {
+            "prefix": "FormContextControlGetDisabled",
+            "description": "Returns whether the control is disabled.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').getDisabled();"
+            ]
+        }
+    },
+    {
+        "Control Get Entity Types": {
+            "prefix": "FormContextControlGetEntityTypes",
+            "description": "Gets the types of entities allowed in the lookup control.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').getEntityTypes();"
+            ]
+        }
+    },
+    {
+        "Control Get Initial Url": {
+            "prefix": "FormContextControlGetInitialUrl",
+            "description": "Returns the default URL that an IFRAME control is configured to display.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').getInitialUrl();"
+            ]
+        }
+    },
+    {
+        "Control Get Label": {
+            "prefix": "FormContextControlGetLabel",
+            "description": "Returns the label for the control.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').getLabel();"
+            ]
+        }
+    },
+    {
+        "Control Get Name": {
+            "prefix": "FormContextControlGetName",
+            "description": "Returns the name assigned to the control.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').getName();"
+            ]
+        }
+    },
+    {
+        "Control Get Object": {
+            "prefix": "FormContextControlGetObject",
+            "description": "Returns the object in the form that represents an IFRAME or web resource.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').getObject();"
+            ]
+        }
+    },
+    {
+        "Control Get Parent": {
+            "prefix": "FormContextControlGetParent",
+            "description": "Returns a reference to the section object that contains the control.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').getParent();"
+            ]
+        }
+    },
+    {
+        "Control Get Search Query": {
+            "prefix": "FormContextControlGetSearchQuery",
+            "description": "Gets the text used as the search criteria for the knowledge base management control.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').getSearchQuery();"
+            ]
+        }
+    },
+    {
+        "Control Get Show Time": {
+            "prefix": "FormContextControlGetShowTime",
+            "description": "Get whether a date control shows the time portion of the date.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').getShowTime();"
+            ]
+        }
+    },
+    {
+        "Control Get Src": {
+            "prefix": "FormContextControlGetSrc",
+            "description": "Returns the current URL being displayed in an IFRAME or web resource.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').getSrc();"
+            ]
+        }
+    },
+    {
+        "Control Get State": {
+            "prefix": "FormContextControlGetState",
+            "description": "Returns the state of the timer control.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').getState();"
+            ]
+        }
+    },
+    {
+        "Control Get Total Result Count": {
+            "prefix": "FormContextControlGetTotalResultCount",
+            "description": "Gets the count of results found in the search control.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').getTotalResultCount();"
+            ]
+        }
+    },
+    {
+        "Control Get Value": {
+            "prefix": "FormContextControlGetValue",
+            "description": "Gets the latest value in a control as the user types characters in a specific text or number field. This method helps you to build interactive experiences by validating data and alerting users as they type characters in a control.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').getValue();"
+            ]
+        }
+    },
+    {
+        "Control Get Visible": {
+            "prefix": "FormContextControlGetVisible",
+            "description": "Returns a value that indicates whether the control is currently visible.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').getVisible();"
+            ]
+        }
+    },
+    {
+        "Control Open Search Result": {
+            "prefix": "FormContextControlOpenSearchResult",
+            "description": "Opens a search result in the search control by specifying the result number.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').openSearchResult(${2:resultNumber}, '${3:Inline|Popout}');"
+            ]
+        }
+    },
+    {
+        "Control Refresh": {
+            "prefix": "FormContextControlRefresh",
+            "description": "Refreshes the data displayed in a timelinewall and timer control.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').refresh();"
+            ]
+        }
+    },
+    {
+        "Control Remove On Post Search": {
+            "prefix": "FormContextControlRemoveOnPostSearch",
+            "description": "Removes an event handler from the PostSearch event.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').removeOnPostSearch(${2:myFunction});"
+            ]
+        }
+    },
+    {
+        "Control Remove On Result Opened": {
+            "prefix": "FormContextControlRemoveOnResultOpened",
+            "description": "Removes an event handler from the OnResultOpened event.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').removeOnResultOpened(${2:myFunction});"
+            ]
+        }
+    },
+    {
+        "Control Remove On Selection": {
+            "prefix": "FormContextControlRemoveOnSelection",
+            "description": "Removes an event handler from the OnSelection event.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').removeOnSelection(${2:myFunction});"
+            ]
+        }
+    },
+    {
+        "Control Remove Option": {
+            "prefix": "FormContextControlRemoveOption",
+            "description": "Removes an option from a control.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').removeOption(${2:value});"
+            ]
+        }
+    },
+    {
+        "Control Remove Pre Search": {
+            "prefix": "FormContextControlRemovePreSearch",
+            "description": "Removes event handler functions that have previously been set for the PreSearch event.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').removePreSearch(${2:myFunction});"
+            ]
+        }
+    },
+    {
+        "Control Set Data": {
+            "prefix": "FormContextControlSetData",
+            "description": "Sets the value of the data query string parameter passed to a Silverlight web resource.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').setData('${2:string}');"
+            ]
+        }
+    },
+    {
+        "Control Set Default View": {
+            "prefix": "FormContextControlSetDefaultView",
+            "description": "Removes event handler functions that have previously been set for the PreSearch event.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').setDefaultView('${2:{00000000-0000-0000-00AA-000000000001}}');"
+            ]
+        }
+    },
+    {
+        "Control Set Disabled": {
+            "prefix": "FormContextControlSetDisabled",
+            "description": "Sets whether the control is disabled.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').setDisabled(${2:true|false});"
+            ]
+        }
+    },
+    {
+        "Control Set Entity Types": {
+            "prefix": "FormContextControlSetEntityTypes",
+            "description": "Sets the types of entities allowed in the lookup control.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').setEntityTypes(['${2:account}']);"
+            ]
+        }
+    },
+    {
+        "Control Set Focus": {
+            "prefix": "FormContextControlSetFocus",
+            "description": "Sets the focus on the control.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').setFocus();"
+            ]
+        }
+    },
+    {
+        "Control Set Label": {
+            "prefix": "FormContextControlSetLabel",
+            "description": "Sets the label of the control.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').setLabel('${2:label}');"
+            ]
+        }
+    },
+    {
+        "Control Set Notification": {
+            "prefix": "FormContextControlSetNotification",
+            "description": "Displays an error message for the control to indicate that data isn’t valid. When this method is used,  a red \"X\" icon appears next to the control. On Dynamics 365 for Customer Engagement apps mobile clients, tapping on the icon will display the message.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').setNotification('${2:message}', '${3:notification_unique_id}');"
+            ]
+        }
+    },
+    {
+        "Control Set Search Query": {
+            "prefix": "FormContextControlSetSearchQuery",
+            "description": "Sets the text used as the search criteria for the knowledge base search control.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').setSearchQuery('${2:searchString}');"
+            ]
+        }
+    },
+    {
+        "Control Set Show Time": {
+            "prefix": "FormContextControlSetShowTime",
+            "description": "Specify whether a date control should show the time portion of the date.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').setShowTime(${2:true|false});"
+            ]
+        }
+    },
+    {
+        "Control Set Src": {
+            "prefix": "FormContextControlSetSrc",
+            "description": "Sets the URL to be displayed in an IFRAME or web resource.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').setSrc('${2:url}');"
+            ]
+        }
+    },
+    {
+        "Control Set Visible": {
+            "prefix": "FormContextControlSetVisible",
+            "description": "Sets a value that indicates whether the control is visible.",
+            "body": [
+                "formContext.getControl('${1:fieldName}').setVisible(${2:true|false});"
+            ]
+        }
+    }
+]

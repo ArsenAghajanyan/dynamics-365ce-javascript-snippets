@@ -1,0 +1,124 @@
+[
+    {
+        "Capture Audio": {
+            "prefix": "XrmDeviceCaptureAudio",
+            "description": "Invokes the device microphone to record audio.",
+            "body": [
+                "Xrm.Device.captureAudio().then(",
+                "\tfunction success(result) {",
+                "\t\t// perform operations on the captured audio",
+                "\t\t$0",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    },
+    {
+        "Capture Image": {
+            "prefix": "XrmDeviceCaptureImage",
+            "description": "Invokes the device camera to capture an image.",
+            "body": [
+                "var imageOptions = {",
+                "\tallowEdit: ${1:true|false}",
+                "\theight: ${2:250}",
+                "\twidth: ${3:400}",
+                "\tpreferFrontCamera: ${4:true|false}",
+                "\tquality: ${5:100}",
+                "};",
+                "",
+                "Xrm.Device.captureImage(imageOptions).then(",
+                "\tfunction success(result) {",
+                "\t\t// perform operations on the captured image",
+                "\t\t$0",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    },
+    {
+        "Capture Video": {
+            "prefix": "XrmDeviceCaptureVideo",
+            "description": "Invokes the device camera to record video.",
+            "body": [
+                "Xrm.Device.captureVideo().then(",
+                "\tfunction success(result) {",
+                "\t\t// perform operations on the captured video",
+                "\t\t$0",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    },
+    {
+        "Get Barcode Value": {
+            "prefix": "XrmDeviceGetBarcodeValue",
+            "description": "Invokes the device camera to scan the barcode information, such as a product number.",
+            "body": [
+                "Xrm.Device.getBarcodeValue().then(",
+                "\tfunction success(result) {",
+                "\t\t// perform operations on the barcode value",
+                "\t\t$0",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    },
+    {
+        "Get Current Position": {
+            "prefix": "XrmDeviceGetCurrentPosition",
+            "description": "Returns the current location using the device geolocation capability.",
+            "body": [
+                "Xrm.Device.getCurrentPosition().then(",
+                "\tfunction success(result) {",
+                "\t\t// perform operations on the captured location",
+                "\t\t$0",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    },
+    {
+        "Pick File": {
+            "prefix": "XrmDevicePickFile",
+            "description": "Opens a dialog box to select files from your computer (web client) or mobile device (mobile clients).",
+            "body": [
+                "var pickFileOptions = {",
+                "\taccept: \"${1:audio|video|image}\"",
+                "\tallowMultipleFiles: ${2:true|false}",
+                "\tmaximumAllowedFileSize: ${3:84}",
+                "};",
+                "",
+                "Xrm.Device.pickFile(pickFileOptions).then(",
+                "\tfunction success(result) {",
+                "\t\t// perform operations on selected files",
+                "\t\t$0",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    }
+]

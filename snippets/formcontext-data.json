@@ -1,0 +1,304 @@
+[
+    {
+        "Data Add On Load": {
+            "prefix": "FormContextDataAddOnLoad",
+            "description": "Adds a function to be called when form data is loaded.",
+            "body": [
+                "formContext.data.addOnLoad(${1:myFunction});"
+            ]
+        }
+    },
+    {
+        "Data Get Is Dirty": {
+            "prefix": "FormContextDataGetIsDirty",
+            "description": "Gets a boolean value indicating whether the form data has been modified.",
+            "body": [
+                "formContext.data.getIsDirty();"
+            ]
+        }
+    },
+    {
+        "Data Get Is Valid": {
+            "prefix": "FormContextDataGetIsValid",
+            "description": "Gets a boolean value indicating whether all of the form data is valid. This includes the main entity and any unbound attributes.",
+            "body": [
+                "formContext.data.getIsValid();"
+            ]
+        }
+    },
+    {
+        "Data Refresh": {
+            "prefix": "FormContextDataRefresh",
+            "description": "Asynchronously refreshes and optionally saves all the data of the form without reloading the page.",
+            "body": [
+                "formContext.data.refresh(${1:true|false}).then(",
+                "\tfunction success(result) {",
+                "\t\t// perform operations on refresh",
+                "\t\t$0",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    },
+    {
+        "Data Remove On Load": {
+            "prefix": "FormContextDataRemoveOnLoad",
+            "description": "Removes a function to be called when form data is loaded.",
+            "body": [
+                "formContext.data.removeOnLoad(${1:myFunction});"
+            ]
+        }
+    },
+    {
+        "Data Save": {
+            "prefix": "FormContextDataSave",
+            "description": "Gets a boolean value indicating whether the form data has been modified.",
+            "body": [
+                "var saveOptions = {",
+                "\tsaveMode: ${1:1}",
+                "\tuseSchedulingEngine: ${2:true|false}",
+                "};",
+                "",
+                "formContext.data.save(saveOptions).then(",
+                "\tfunction success(result) {",
+                "\t\t// perform operations on refresh",
+                "\t\t$0",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    },
+    {
+        "Data Entity Add On Save": {
+            "prefix": "FormContextDataEntityAddOnSave",
+            "description": "Adds a function to be called when the record is saved.",
+            "body": [
+                "formContext.data.entity.addOnSave(${1:myFunction});"
+            ]
+        }
+    },
+    {
+        "Data Entity Get Data Xml": {
+            "prefix": "FormContextDataEntityGetDataXml",
+            "description": "Returns a string representing the XML that will be sent to the server when the record is saved. Only data in fields that have changed are set to the server.",
+            "body": [
+                "formContext.data.entity.getDataXml();;"
+            ]
+        }
+    },
+    {
+        "Data Entity Get Entity Name": {
+            "prefix": "FormContextDataEntityGetEntityName",
+            "description": "Returns a string representing the logical name of the entity for the record.",
+            "body": [
+                "formContext.data.entity.getEntityName();"
+            ]
+        }
+    },
+    {
+        "Data Entity Get Entity Reference": {
+            "prefix": "FormContextDataEntityGetEntityReference",
+            "description": "Returns a lookup value that references the record.",
+            "body": [
+                "formContext.data.entity.getEntityReference();"
+            ]
+        }
+    },
+    {
+        "Data Entity Get Id": {
+            "prefix": "FormContextDataEntityGetId",
+            "description": "Returns a string representing the GUID value for the record.",
+            "body": [
+                "formContext.data.entity.getId();"
+            ]
+        }
+    },
+    {
+        "Data Entity Get Is Dirty": {
+            "prefix": "FormContextDataEntityGetIsDirty",
+            "description": "Gets a boolean value indicating whether any fields in the form have been modified.",
+            "body": [
+                "formContext.data.entity.getIsDirty();"
+            ]
+        }
+    },
+    {
+        "Data Entity Get Primary Attribute Value": {
+            "prefix": "FormContextDataEntityGetPrimaryAttributeValue",
+            "description": "Gets a string for the value of the primary attribute of the entity.",
+            "body": [
+                "formContext.data.entity.getPrimaryAttributeValue();"
+            ]
+        }
+    },
+    {
+        "Data Entity Is Valid": {
+            "prefix": "FormContextDataEntityIsValid",
+            "description": "Gets a boolean value indicating whether all of the entity data is valid.",
+            "body": [
+                "formContext.data.entity.isValid();"
+            ]
+        }
+    },
+    {
+        "Data Entity Remove On Save": {
+            "prefix": "FormContextDataEntityRemoveOnSave",
+            "description": "Removes a function to be called when form data is loaded.",
+            "body": [
+                "formContext.data.entity.removeOnSave(${1:myFunction});"
+            ]
+        }
+    },
+    {
+        "Data Entity Save": {
+            "prefix": "FormContextDataEntitySave",
+            "description": "Saves the record synchronously with the options to close the form or open a new form after the save is completed.",
+            "body": [
+                "formContext.data.entity.save('${1:saveandclose|saveandnew}');"
+            ]
+        }
+    },
+    {
+        "Data Entity Add On Process Status Change": {
+            "prefix": "FormContextDataEntityAddOnProcessStatusChange",
+            "description": "Adds a function as an event handler for the OnProcessStatusChange event so that it will be called when the business process flow status changes.",
+            "body": [
+                "formContext.data.entity.addOnProcessStatusChange(${1:myFunction});"
+            ]
+        }
+    },
+    {
+        "Data Entity Add On Stage Change": {
+            "prefix": "FormContextDataEntityAddOnStageChange",
+            "description": "Adds a function as an event handler for the OnStageChange event so that it will be called when the business process flow stage changes.",
+            "body": [
+                "formContext.data.entity.addOnStageChange(${1:myFunction});"
+            ]
+        }
+    },
+    {
+        "Data Entity Add On Stage Selected": {
+            "prefix": "FormContextDataEntityAddOnStageSelected",
+            "description": "Adds a function as an event handler for the OnStageSelected event so that it will be called when a business process flow stage is selected.",
+            "body": [
+                "formContext.data.entity.addOnStageSelected(${1:myFunction});"
+            ]
+        }
+    },
+    {
+        "Data Entity Remove On Process Status Change": {
+            "prefix": "FormContextDataEntityRemoveOnProcessStatusChange",
+            "description": "Removes an event handler from the OnProcessStatusChange event.",
+            "body": [
+                "formContext.data.entity.removeOnProcessStatusChange(${1:myFunction});"
+            ]
+        }
+    },
+    {
+        "Data Entity Remove On Stage Change": {
+            "prefix": "FormContextDataEntityRemoveOnStageChange",
+            "description": "Removes an event handler from the OnStageChange event.",
+            "body": [
+                "formContext.data.entity.RemoveOnStageChange(${1:myFunction});"
+            ]
+        }
+    },
+    {
+        "Data Entity Remove On Stage Selected": {
+            "prefix": "FormContextDataEntityRemoveOnStageSelected",
+            "description": "Removes an event handler from the OnStageSelected event.",
+            "body": [
+                "formContext.data.entity.removeOnStageSelected(${1:myFunction});"
+            ]
+        }
+    },
+    {
+        "Data Process Get Active Process": {
+            "prefix": "FormContextDataProcessGetActiveProcess",
+            "description": "Returns a Process object representing the active process.",
+            "body": [
+                "formContext.data.process.getActiveProcess();"
+            ]
+        }
+    },
+    {
+        "Data Process Set Active Process": {
+            "prefix": "FormContextDataProcessSetActiveProcess",
+            "description": "Sets a Process as the active process.",
+            "body": [
+                "formContext.data.process.setActiveProcess('${1:process_unique_id}', ${2:callbackFunction});"
+            ]
+        }
+    },
+    {
+        "Data Process Get Enabled Processes": {
+            "prefix": "FormContextDataProcessGetEnabledProcesses",
+            "description": "Asynchronously retrieves the business process flows enabled for an entity that the current user can switch to.",
+            "body": [
+                "formContext.data.process.getEnabledProcesses(${1:callbackFunction(enabledProcesses)});"
+            ]
+        }
+    },
+    {
+        "Data Process Get Process Instances": {
+            "prefix": "FormContextDataProcessGetProcessInstances",
+            "description": "Returns all the process instances for the entity record that the calling user has access to.",
+            "body": [
+                "formContext.data.process.getProcessInstances(${1:callbackFunction(object)});"
+            ]
+        }
+    },
+    {
+        "Data Process Set Active Process Instance": {
+            "prefix": "FormContextDataProcessSetActiveProcessInstance",
+            "description": "Sets a process instance as the active instance.",
+            "body": [
+                "formContext.data.process.setActiveProcessInstance(${1:processInstanceId}, ${2:callbackFunction});"
+            ]
+        }
+    },
+    {
+        "Data Process Get Instance Id": {
+            "prefix": "FormContextDataProcessGetInstanceId",
+            "description": "Returns the unique identifier of the process instance.",
+            "body": [
+                "formContext.data.process.getInstanceId();"
+            ]
+        }
+    },
+    {
+        "Data Process Get Instance Name": {
+            "prefix": "FormContextDataProcessGetInstanceName",
+            "description": "Returns the name of the process instance.",
+            "body": [
+                "formContext.data.process.getInstanceName();"
+            ]
+        }
+    },
+    {
+        "Data Process Get Status": {
+            "prefix": "FormContextDataProcessGetStatus",
+            "description": "Returns the current status of the process instance.",
+            "body": [
+                "formContext.data.process.getStatus();"
+            ]
+        }
+    },
+    {
+        "Data Process Set Status": {
+            "prefix": "FormContextDataProcessSetStatus",
+            "description": "Sets the current status of the active process instance.",
+            "body": [
+                "formContext.data.process.setStatus('${1:active|aborted|finished}', ${2:callbackFunction});"
+            ]
+        }
+    }
+]
