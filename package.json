@@ -67,7 +67,7 @@
             },
             {
                 "language": "javascript",
-                "path": "./snippets/step.json"
+                "path": "./snippets/steps.json"
             },
             {
                 "language": "javascript",
@@ -88,6 +88,18 @@
             {
                 "language": "javascript",
                 "path": "./snippets/section.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/tabs.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/gridcontext.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/gridrow.json"
             }
         ]
     }

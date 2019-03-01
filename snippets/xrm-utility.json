@@ -43,6 +43,48 @@
         }
     },
     {
+        "Get Global Context": {
+            "prefix": "XrmUtilityGetGlobalContext",
+            "description": "Gets the global context.",
+            "body": "Xrm.Utility.getGlobalContext()"
+        }
+    },
+    {
+        "Get Global Context Client": {
+            "prefix": "XrmUtilityGetGlobalContextClient",
+            "description": "Provides access to the methods to determine which client is being used, whether the client is connected to the server, and what kind of device is being used.",
+            "body": "Xrm.Utility.getGlobalContext().client"
+        }
+    },
+    {
+        "Get Global Context Client Get Client": {
+            "prefix": "XrmUtilityGetGlobalContextClientGetClient",
+            "description": "Returns a value to indicate which client the script is executing in.",
+            "body": "Xrm.Utility.getGlobalContext().client.getClient()"
+        }
+    },
+    {
+        "Get Global Context Client Get Client State": {
+            "prefix": "XrmUtilityGetGlobalContextClientGetClientState",
+            "description": "Returns a value to indicate the state of the client.",
+            "body": "Xrm.Utility.getGlobalContext().client.getClientState()"
+        }
+    },
+    {
+        "Get Global Context Client Get Form Factor": {
+            "prefix": "XrmUtilityGetGlobalContextClientGetFormFactor",
+            "description": "Returns information about the kind of device the user is using.",
+            "body": "Xrm.Utility.getGlobalContext().client.getFormFactor()"
+        }
+    },
+    {
+        "Get Global Context Client Is Offline": {
+            "prefix": "XrmUtilityGetGlobalContextClientIsOffline",
+            "description": "Returns information whether the server is online or offline.",
+            "body": "Xrm.Utility.getGlobalContext().client.isOffline()"
+        }
+    },
+    {
         "Get Learning Path Attribute Name": {
             "prefix": "XrmUtilityGetLearningPathAttributeName",
             "description": "Returns the name of the DOM attribute expected by the Learning Path (guided help) Content Designer for identifying UI controls in the Dynamics 365 for Customer Engagement apps form.",
