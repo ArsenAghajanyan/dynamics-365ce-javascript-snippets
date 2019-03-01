@@ -1,0 +1,93 @@
+[
+    {
+        "Get Control": {
+            "prefix": "QuickViewControlGetControl",
+            "description": "Gets the control on a form.",
+            "body": "quickViewControl.getControl('${1:fieldname}');"
+        }
+    },
+    {
+        "Get Control Type": {
+            "prefix": "QuickViewControlGetControlType",
+            "description": "Returns a string value that categorizes quick view controls.",
+            "body": "quickViewControl.getControlType();"
+        }
+    },
+    {
+        "Get Disabled": {
+            "prefix": "QuickViewControlGetDisabled",
+            "description": "Gets a boolean value indicating whether the control is disabled.",
+            "body": "quickViewControl.getDisabled();"
+        }
+    },
+    {
+        "Get Label": {
+            "prefix": "QuickViewControlGetLabel",
+            "description": "Returns the label for the quick view control.",
+            "body": "quickViewControl.getLabel();"
+        }
+    },
+    {
+        "Get Name": {
+            "prefix": "QuickViewControlGetName",
+            "description": "Returns the name assigned to the quick view control.",
+            "body": "quickViewControl.getName();"
+        }
+    },
+    {
+        "Get Parent": {
+            "prefix": "QuickViewControlGetParent",
+            "description": "Returns a reference to the section object that contains the control.",
+            "body": "quickViewControl.getParent();"
+        }
+    },
+    {
+        "Get Visible": {
+            "prefix": "QuickViewControlGetVisible",
+            "description": "Returns a value that indicates whether the quick view control is currently visible.",
+            "body": "quickViewControl.getVisible();"
+        }
+    },
+    {
+        "Is Loaded": {
+            "prefix": "QuickViewControlIsLoaded",
+            "description": "Returns whether the data binding for the constituent controls in a quick view control is complete.",
+            "body": "quickViewControl.isLoaded();"
+        }
+    },
+    {
+        "Refresh": {
+            "prefix": "QuickViewControlRefresh",
+            "description": "Refreshes the data displayed in a quick view control.",
+            "body": "quickViewControl.refresh();"
+        }
+    },
+    {
+        "Set Disabled": {
+            "prefix": "QuickViewControlSetDisabled",
+            "description": "Sets the state of the control to either enabled or disabled.",
+            "body": "quickViewControl.setDisabled(${1:true|false});"
+        }
+    },
+    {
+        "Set Focus": {
+            "prefix": "QuickViewControlSetFocus",
+            "description": "Sets focus on the control.",
+            "body": "quickViewControl.setFocus();"
+        }
+    },
+    {
+        "Set Label": {
+            "prefix": "QuickViewControlSetLabel",
+            "description": "Sets the label for the quick view control.",
+            "body": "quickViewControl.setLabel('${1:label}');"
+        }
+    },
+    {
+        "Set Visible": {
+            "prefix": "QuickViewControlSetVisible",
+            "description": "Displays or hides a control.",
+            "body": "quickViewControl.setVisible(${1:true|false});"
+        }
+    }
+]

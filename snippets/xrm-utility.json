@@ -3,9 +3,7 @@
         "Close Progress Indicator": {
             "prefix": "XrmUtilityCloseProgressIndicator",
             "description": "Closes a progress dialog box.",
-            "body": [
-                "Xrm.Utility.closeProgressIndicator();"
-            ]
+            "body": "Xrm.Utility.closeProgressIndicator();"
         }
     },
     {
@@ -13,7 +11,7 @@
             "prefix": "XrmUtilityGetAllowedStatusTransitions",
             "description": "Returns the valid state transitions for the specified entity type and state code.",
             "body": [
-                "Xrm.Utility.getAllowedStatusTransitions(\"${1:account}\", ${2:690970000}).then(",
+                "Xrm.Utility.getAllowedStatusTransitions('${1:account}', ${2:690970000}).then(",
                 "\tfunction success(result) {",
                 "\t\t// perform operations",
                 "\t\t$0",
@@ -31,7 +29,7 @@
             "prefix": "XrmUtilityGetEntityMetadata",
             "description": "Returns the entity metadata for the specified entity.",
             "body": [
-                "Xrm.Utility.getEntityMetadata(\"${1:account}\", [ \"${2:name}\" ]).then(",
+                "Xrm.Utility.getEntityMetadata('${1:account}', [ '${2:name}' ]).then(",
                 "\tfunction success(result) {",
                 "\t\t// perform operations",
                 "\t\t$0",
@@ -48,9 +46,7 @@
         "Get Learning Path Attribute Name": {
             "prefix": "XrmUtilityGetLearningPathAttributeName",
             "description": "Returns the name of the DOM attribute expected by the Learning Path (guided help) Content Designer for identifying UI controls in the Dynamics 365 for Customer Engagement apps form.",
-            "body": [
-                "Xrm.Utility.getLearningPathAttributeName();"
-            ]
+            "body": "Xrm.Utility.getLearningPathAttributeName();"
         }
     },
     {
@@ -59,10 +55,11 @@
             "description": "Refreshes the parent grid containing the specified record.",
             "body": [
                 "var lookupOptions = {",
-                "\tentityType: \"${1:entityType}\",",
+                "\tentityType: '${1:entityType}',",
                 "\tid: ${2:id},",
-                "\tname: \"${3:name}\",",
+                "\tname: '${3:name}',",
                 "};",
+                "",
                 "Xrm.Utility.refreshParentGrid(lookupOptions);"
             ]
         }
@@ -71,9 +68,7 @@
         "Show Progress Indicator": {
             "prefix": "XrmUtilityShowProgressIndicator",
             "description": "Displays a progress dialog with the specified message.",
-            "body": [
-                "Xrm.Utility.showProgressIndicator(\"{1:message}\");"
-            ]
+            "body": "Xrm.Utility.showProgressIndicator('{1:message}');"
         }
     }
 ]

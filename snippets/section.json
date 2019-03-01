@@ -1,0 +1,44 @@
+[
+    {
+        "Get Label": {
+            "prefix": "SectionObjGetLabel",
+            "description": "Returns the label for the section.",
+            "body": "sectionObj.getLabel();"
+        }
+    },
+    {
+        "Get Name": {
+            "prefix": "SectionObjGetName",
+            "description": "Returns the name of the section.",
+            "body": "sectionObj.getName();"
+        }
+    },
+    {
+        "Get Parent": {
+            "prefix": "SectionObjGetParent",
+            "description": "Returns the tab containing the section.",
+            "body": "sectionObj.getParent();"
+        }
+    },
+    {
+        "Get Visible": {
+            "prefix": "SectionObjGetVisible",
+            "description": "Returns a value that indicates whether the section is currently visible.",
+            "body": "sectionObj.getVisible();"
+        }
+    },
+    {
+        "Set Label": {
+            "prefix": "SectionObjSetLabel",
+            "description": "Sets the label of the section.",
+            "body": "sectionObj.setLabel('${1:label}');"
+        }
+    },
+    {
+        "Set Visible": {
+            "prefix": "SectionObjSetVisible",
+            "description": "Sets a value that indicates whether the section is visible.",
+            "body": "sectionObj.setVisible(${1:true|false});"
+        }
+    }
+]

@@ -300,5 +300,59 @@
                 "formContext.data.process.setStatus('${1:active|aborted|finished}', ${2:callbackFunction});"
             ]
         }
+    },
+    {
+        "Data Process Get Active Stage": {
+            "prefix": "FormContextDataProcessGetActiveStage",
+            "description": "Returns a Stage object representing the active stage.",
+            "body": [
+                "formContext.data.process.getActiveStage();"
+            ]
+        }
+    },
+    {
+        "Data Process Set Active Stage": {
+            "prefix": "FormContextDataProcessSetActiveStage",
+            "description": "Sets a completed stage as the active stage.",
+            "body": [
+                "formContext.data.process.setActiveStage(${1:stageId}, ${2:callbackFunction});"
+            ]
+        }
+    },
+    {
+        "Data Process Get Active Path": {
+            "prefix": "FormContextDataProcessGetActivePath",
+            "description": "Gets a collection of stages currently in the active path with methods to interact with the stages displayed in the business process flow control.",
+            "body": [
+                "formContext.data.process.getActivePath();"
+            ]
+        }
+    },
+    {
+        "Data Process Get Selected Stage": {
+            "prefix": "FormContextDataProcessGetSelectedStage",
+            "description": "Gets the currently selected stage.",
+            "body": [
+                "formContext.data.process.getSelectedStage();"
+            ]
+        }
+    },
+    {
+        "Data Process Move Next": {
+            "prefix": "FormContextDataProcessMoveNext",
+            "description": "Progresses to the next stage.",
+            "body": [
+                "formContext.data.process.moveNext(${1:callbackFunction});"
+            ]
+        }
+    },
+    {
+        "Data Process Move Previous": {
+            "prefix": "FormContextDataProcessMovePrevious",
+            "description": "Moves to the previous stage.",
+            "body": [
+                "formContext.data.process.movePrevious(${1:callbackFunction});"
+            ]
+        }
     }
 ]

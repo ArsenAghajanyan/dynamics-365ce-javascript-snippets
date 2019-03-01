@@ -4,8 +4,9 @@
             "prefix": "XrmNavigationOpenAlertDialog",
             "description": "Displays an alert dialog containing a message and a button.",
             "body": [
-                "var alertStrings = { confirmButtonLabel: \"${1:Yes}\", text: \"${2:This is an alert.}\" };",
+                "var alertStrings = { confirmButtonLabel: '${1:Yes}', text: '${2:This is an alert.}' };",
                 "var alertOptions = { height: ${3:120}, width: ${4:260} };",
+                "",
                 "Xrm.Navigation.openAlertDialog(alertStrings, alertOptions).then(",
                 "\tfunction success(result) {",
                 "\t\t// perform operations on alert dialog close",
@@ -25,20 +26,21 @@
             "description": "Displays a confirmation dialog box containing a message and two buttons.",
             "body": [
                 "var confirmStrings = {",
-                "\tcancelButtonLabel: \"${1:Cancel}\",",
-                "\tconfirmButtonLabel: \"${2:Confirm}\",",
-                "\tsubtitle: \"${3:Click confirm to proceed}\",",
-                "\ttext: \"${4:This is a confirmation.}\",",
-                "\ttitle: \"{5:Confirmation Dialog}\"",
+                "\tcancelButtonLabel: '${1:Cancel}',",
+                "\tconfirmButtonLabel: '${2:Confirm}',",
+                "\tsubtitle: '${3:Click confirm to proceed}',",
+                "\ttext: '${4:This is a confirmation.}',",
+                "\ttitle: '{5:Confirmation Dialog}'",
                 "};",
                 "var confirmOptions = { height: ${6:200}, width: ${7:450} };",
+                "",
                 "Xrm.Navigation.openConfirmDialog(confirmStrings, confirmOptions).then(",
                 "\tfunction (success) {",    
                 "\t\tif (success.confirmed) {",
-                "\t\t\tconsole.log(\"Dialog closed using OK button.\");",
+                "\t\t\tconsole.log('Dialog closed using OK button.');",
                 "\t\t\t$0",
                 "\t\t} else {",
-                "\t\t\tconsole.log(\"Dialog closed using Cancel button or X.\");",
+                "\t\t\tconsole.log('Dialog closed using Cancel button or X.');",
                 "\t\t}",
                 "\t},",
                 "\tfunction (error) {",
@@ -55,10 +57,11 @@
             "description": "Displays an error dialog.",
             "body": [
                 "var errorOptions = {",
-                "\tdetails: \"${1:Details specified in Download Log File.}\",",
+                "\tdetails: '${1:Details specified in Download Log File.}',",
                 "\terrorCode: ${2:404},",
-                "\tmessage: \"${3:This is an error dialog}\",",
+                "\tmessage: '${3:This is an error dialog}',",
                 "};",
+                "",
                 "Xrm.Navigation.openErrorDialog(errorOptions).then(",
                 "\tfunction (success) {",
                 "\t\t// perform operations on error dialog close",
@@ -78,11 +81,12 @@
             "description": "Opens a file.",
             "body": [
                 "var file = {",
-                "\tfileContent: \"${1:Contents of the file.}\",",
-                "\tfileName: \"${2:Name of the file.}\",",
+                "\tfileContent: '${1:Contents of the file.}',",
+                "\tfileName: '${2:Name of the file.}',",
                 "\tfileSize: ${3:24},",
-                "\tmimeType: \"${4:MIME type of the file.}\",",
-                "};",    
+                "\tmimeType: '${4:MIME type of the file.}',",
+                "};",
+                "",
                 "var openFileOptions = { openMode: ${5:1|2} };",
                 "Xrm.Navigation.openFile(file, openFileOptions);"
             ]
@@ -95,13 +99,13 @@
             "body": [
                 "var entityFormOptions = {",
                 "\tcmdbar: ${1:true|false},",
-                "\tcreateFromEntity: ${2:\"lookup to the record that will provide default values\"},",
+                "\tcreateFromEntity: ${2:'lookup to the record that will provide default values'},",
                 "\tentityId: ${3:id},",
-                "\tentityName: \"${4:account}\",",
+                "\tentityName: '${4:account}',",
                 "\tformId: ${5:formId},",
                 "\theight: ${6:200},",
                 "\twidth: ${7:450},",
-                "\tnavbar: \"${8:on|off|entity}\",",
+                "\tnavbar: '${8:on|off|entity}',",
                 "\topenInNewWindow: ${9:true|false},",
                 "\twindowPosition: ${10:1|2},",
                 "\tprocessId: ${11:businessProcessId},",
@@ -110,6 +114,7 @@
                 "\tuseQuickCreateForm: ${14:true|false}",
                 "};",
                 "var formParameters = { }",
+                "",
                 "Xrm.Navigation.openForm(entityFormOptions, formParameters).then(",
                 "\tfunction (success) {",
                 "\t\t// perform operations if record is saved in the quick create form",
@@ -132,7 +137,8 @@
                 "\theight: ${1:200},",
                 "\twidth: ${2:450}",
                 "};",
-                "Xrm.Navigation.openUrl(\"${3:url}\", openUrlOptions);"
+                "",
+                "Xrm.Navigation.openUrl('${3:url}', openUrlOptions);"
             ]
         }
     },
@@ -142,7 +148,8 @@
             "description": "Opens an HTML web resource.",
             "body": [
                 "var windowOptions = { height: ${1:400}, width: ${2:400} }",
-                "Xrm.Navigation.openWebResource(\"${3:new_webResource.html}\", windowOptions, \"${4:dataItemValue}\");"
+                "",
+                "Xrm.Navigation.openWebResource('${3:new_webResource.html}', windowOptions, '${4:dataItemValue}');"
             ]
         }
     }

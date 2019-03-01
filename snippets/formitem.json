@@ -1,0 +1,23 @@
+[
+    {
+        "Get Id": {
+            "prefix": "FormItemGetId",
+            "description": "Returns the ID of the form.",
+            "body": "formItem.getId();"
+        }
+    },
+    {
+        "Get Label": {
+            "prefix": "FormItemGetLabel",
+            "description": "Returns the label of the form.",
+            "body": "formItem.getLabel();"
+        }
+    },
+    {
+        "Navigate": {
+            "prefix": "FormItemNavigate",
+            "description": "Opens the specified form.",
+            "body": "formItem.navigate();"
+        }
+    }
+]

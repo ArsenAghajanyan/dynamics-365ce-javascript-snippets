@@ -1,0 +1,135 @@
+[
+    {
+        "Add On Load": {
+            "prefix": "FormContextUiAddOnLoad",
+            "description": "Adds a function to be called on the form OnLoad event.",
+            "body": "formContext.ui.addOnLoad(${1:myFunction})"
+        }
+    },
+    {
+        "Clear Form Notification": {
+            "prefix": "FormContextUiClearFormNotification",
+            "description": "Removes form level notifications.",
+            "body": "formContext.ui.clearFormNotification('${1:notification_unique_id}')"
+        }
+    },
+    {
+        "Close": {
+            "prefix": "FormContextUiClose",
+            "description": "Closes the form.",
+            "body": "formContext.ui.close()"
+        }
+    },
+    {
+        "Get Form Type": {
+            "prefix": "FormContextUiGetFormType",
+            "description": "Gets the form type for the record.",
+            "body": "formContext.ui.getFormType()"
+        }
+    },
+    {
+        "Get View Port Height": {
+            "prefix": "FormContextUiGetViewPortHeight",
+            "description": "Gets the height of the viewport in pixels.",
+            "body": "formContext.ui.getViewPortHeight()"
+        }
+    },
+    {
+        "Get View Port Width": {
+            "prefix": "FormContextUiGetViewPortWidth",
+            "description": "Gets the width of the viewport in pixels.",
+            "body": "formContext.ui.getViewPortWidth()"
+        }
+    },
+    {
+        "Refresh Ribbon": {
+            "prefix": "FormContextUiRefreshRibbon",
+            "description": "Causes the ribbon to re-evaluate data that controls what is displayed in it.",
+            "body": "formContext.ui.refreshRibbon(${1:true|false})"
+        }
+    },
+    {
+        "Remove On Load": {
+            "prefix": "FormContextUiRemoveOnLoad",
+            "description": "Removes a function from the form OnLoad event.",
+            "body": "formContext.ui.removeOnLoad(${1:myFunction})"
+        }
+    },
+    {
+        "Set Form Entity Name": {
+            "prefix": "FormContextUiSetFormEntityName",
+            "description": "Sets the name of the entity to be displayed on the form.",
+            "body": "formContext.ui.setFormEntityName('${1:entityName}')"
+        }
+    },
+    {
+        "Set Form Notification": {
+            "prefix": "FormContextUiSetFormNotification",
+            "description": "Displays form level notifications.",
+            "body": "formContext.ui.setFormNotification('${1:message}', '${2:ERROR|WARNING|INFO}', '${3:notification_unique_id}')"
+        }
+    },
+    {
+        "Form Selector Get Item": {
+            "prefix": "FormContextUiFormSelectorItemsGet",
+            "description": "Returns reference to the form corresponding to the passed arguments",
+            "body": "formContext.ui.formSelector.items.get(${1:arg});"
+        }
+    },
+    {
+        "Form Selecter Get Current Item": {
+            "prefix": "FormContextUiFormSelectorGetCurrentItem",
+            "description": "Returns a reference to the form currently being shown. When only one form is available this method will return null.",
+            "body": "formContext.ui.formSelector.getCurrentItem();" 
+        }
+    },
+    {
+        "Process Get Display State": {
+            "prefix": "FormContextUiProcessGetDisplayState",
+            "description": "Retrieves the display state for the business process control.",
+            "body": "formContext.ui.process.getDisplayState();" 
+        }
+    },
+    {
+        "Process Get Visible": {
+            "prefix": "FormContextUiProcessGetVisible",
+            "description": "Returns a value indicating whether the business process control is visible.",
+            "body": "formContext.ui.process.getVisible();" 
+        }
+    },
+    {
+        "Process Reflow": {
+            "prefix": "FormContextUiProcessReflow",
+            "description": "Reflows the UI of the business process control.",
+            "body": "formContext.ui.process.reflow(${1:true|false}, '${2:parent_stage_id}', '${3:next_stage_id}');" 
+        }
+    },
+    {
+        "Process Set Display State": {
+            "prefix": "FormContextUiProcessSetDisplayState",
+            "description": "Sets the display state of the business process control.",
+            "body": "formContext.ui.process.setDisplayState('${1expanded|collapsed|floating}');" 
+        }
+    },
+    {
+        "Process Set Visible": {
+            "prefix": "FormContextUiProcessSetVisible",
+            "description": "Shows or hides the business process control.",
+            "body": "formContext.ui.process.setVisible(${1:true|false});" 
+        }
+    },
+    {
+        "Quick Forms Get Item": {
+            "prefix": "FormContextUiQuickFormsGet",
+            "description": "retrieve a quick view control in the quickForms collection by using the get method by specifying either the index value (integer) or name (string) of the quick view control as the argument:",
+            "body": "formContext.ui.quickForms.get(${1:arg})"
+        }
+    },
+    {
+        "Tabs Get Item": {
+            "prefix": "FormContextUiTabsGet",
+            "description": "retrieve a tab control in the tabs collection by using the get method by specifying either the index value (integer) or name (string) of the quick view control as the argument:",
+            "body": "formContext.ui.tabs.get(${1:arg})"
+        }
+    }
+]

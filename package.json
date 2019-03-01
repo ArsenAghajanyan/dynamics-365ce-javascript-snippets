@@ -60,6 +60,34 @@
             {
                 "language": "javascript",
                 "path": "./snippets/process.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/stage.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/step.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/formcontext-ui.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/formitem.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/navigation.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/quickviewcontrol.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/section.json"
             }
         ]
     }

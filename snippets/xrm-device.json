@@ -103,7 +103,7 @@
             "description": "Opens a dialog box to select files from your computer (web client) or mobile device (mobile clients).",
             "body": [
                 "var pickFileOptions = {",
-                "\taccept: \"${1:audio|video|image}\"",
+                "\taccept: '${1:audio|video|image}'",
                 "\tallowMultipleFiles: ${2:true|false}",
                 "\tmaximumAllowedFileSize: ${3:84}",
                 "};",

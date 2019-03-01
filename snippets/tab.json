@@ -1,0 +1,86 @@
+[
+    {
+        "Add Tab State Change": {
+            "prefix": "TabObjAddTabStateChange",
+            "description": "Adds a function to be called when the TabStateChange event occurs.",
+            "body": "tabObj.addTabStateChange(${1:myFunction});"
+        }
+    },
+    {
+        "Get Display State": {
+            "prefix": "TabObjAddGetDisplayState",
+            "description": "Gets display state of the tab.",
+            "body": "tabObj.getDisplayState();"
+        }
+    },
+    {
+        "Get Label": {
+            "prefix": "TabObjGetLabel",
+            "description": "Returns the label for the tab.",
+            "body": "tabObj.getLabel();"
+        }
+    },
+    {
+        "Get Name": {
+            "prefix": "TabObjGetName",
+            "description": "Returns the name of the tab.",
+            "body": "tabObj.getName();"
+        }
+    },
+    {
+        "Get Parent": {
+            "prefix": "TabObjGetParent",
+            "description": "Returns the formContext.ui object containing the tab.",
+            "body": "tabObj.getParent();"
+        }
+    },
+    {
+        "Get Visible": {
+            "prefix": "TabObjGetVisible",
+            "description": "Returns a value that indicates whether the tab is currently visible.",
+            "body": "tabObj.getVisible();"
+        }
+    },
+    {
+        "Remove Tab State Change": {
+            "prefix": "TabObjRemoveTabStateChange",
+            "description": "Removes a function to be called when the TabStateChange event occurs.",
+            "body": "tabObj.removeTabStateChange(${1:myFunction});"
+        }
+    },
+    {
+        "Set Display State": {
+            "prefix": "TabObjSetDisplayState",
+            "description": "Sets display state of the tab.",
+            "body": "tabObj.setDisplayState('${1:expanded|collapsed}');"
+        }
+    },
+    {
+        "Set Focus": {
+            "prefix": "TabObjSetFocus",
+            "description": "Sets focus on the tab.",
+            "body": "tabObj.setFocus();"
+        }
+    },
+    {
+        "Set Label": {
+            "prefix": "TabObjSetLabel",
+            "description": "Sets the label of the tab.",
+            "body": "tabObj.setLabel('${1:label}');"
+        }
+    },
+    {
+        "Set Visible": {
+            "prefix": "TabObjSetVisible",
+            "description": "Sets a value that indicates whether the tab is visible.",
+            "body": "tabObj.setVisible(${1:true|false});"
+        }
+    },
+    {
+        "Sections Get": {
+            "prefix": "TabObjSectionsGet",
+            "description": "retrieve a section control in the sections collection by using the get method by specifying either the index value (integer) or name (string) of the quick view control as the argument:",
+            "body": "tabObj.sections.get(${1:arg});"
+        }
+    }
+]

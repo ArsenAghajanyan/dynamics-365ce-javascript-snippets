@@ -4,7 +4,7 @@
             "prefix": "XrmWebApiCreateRecord",
             "description": "Creates an entity record.",
             "body": [
-                "Xrm.WebApi.createRecord(\"${1:account}\", ${2:data}).then(",
+                "Xrm.WebApi.createRecord('${1:account}', ${2:data}).then(",
                 "\tfunction success(result) {",
                 "\t\t// perform operations on record creation",
                 "\t\t$0",
@@ -22,7 +22,7 @@
             "prefix": "XrmWebApiDeleteRecord",
             "description": "Deletes an entity record.",
             "body": [
-                "Xrm.WebApi.deleteRecord(\"${1:account}\", ${2:id}).then(",
+                "Xrm.WebApi.deleteRecord('${1:account}', ${2:id}).then(",
                 "\tfunction success(result) {",
                 "\t\t// perform operations on record deletion",
                 "\t\t$0",
@@ -40,7 +40,7 @@
             "prefix": "XrmWebApiRetrieveRecord",
             "description": "Retrieves an entity record.",
             "body": [
-                "Xrm.WebApi.retrieveRecord(\"${1:account}\", ${2:id}, ${3:options}).then(",
+                "Xrm.WebApi.retrieveRecord('${1:account}', ${2:id}, ${3:options}).then(",
                 "\tfunction success(result) {",
                 "\t\t// perform operations on record retrieval",
                 "\t\t$0",
@@ -58,7 +58,7 @@
             "prefix": "XrmWebApiRetrieveMultipleRecords",
             "description": "Retrieves a collection of entity records.",
             "body": [
-                "Xrm.WebApi.retrieveMultipleRecords(\"${1:account}\", ${2:options}, ${3:maxPageSize}).then(",
+                "Xrm.WebApi.retrieveMultipleRecords('${1:account}', ${2:options}, ${3:maxPageSize}).then(",
                 "\tfunction success(result) {",
                 "\t\t// perform operations on on retrieved records",
                 "\t\t$0",
@@ -76,7 +76,7 @@
             "prefix": "XrmWebApiUpdateRecord",
             "description": "Updates an entity record.",
             "body": [
-                "Xrm.WebApi.createRecord(\"${1:account}\", ${2:id}, ${3:data}).then(",
+                "Xrm.WebApi.createRecord('${1:account}', ${2:id}, ${3:data}).then(",
                 "\tfunction success(result) {",
                 "\t\t// perform operations on record update",
                 "\t\t$0",
@@ -93,9 +93,7 @@
         "Is Available Offline": {
             "prefix": "XrmWebApiIsAvailableOffline",
             "description": "Returns a boolean value indicating whether an entity is present in user’s profile and is currently available for use in offline mode.",
-            "body": [
-                "Xrm.WebApi.offline.isAvailableOffline(\"${1:account}\");"
-            ]
+            "body": "Xrm.WebApi.offline.isAvailableOffline('${1:account}');"
         }
     },
     {
