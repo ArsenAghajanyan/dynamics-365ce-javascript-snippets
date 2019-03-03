@@ -85,10 +85,249 @@
         }
     },
     {
+        "Get Global Context Organization Settings": {
+            "prefix": "XrmUtilityGetGlobalContextOrganizationSettings",
+            "description": "Returns information about the current organization settings.",
+            "body": "Xrm.Utility.getGlobalContext().organizationSettings;"
+        }
+    },
+    {
+        "Get Global Context Organization Settings Attributes": {
+            "prefix": "XrmUtilityGetGlobalContextOrganizationSettingsAttributes",
+            "description": "Returns attributes and their values as key:value pairs that are available for the organization entity. Additional values will be available as attributes if they are specified as attribute dependencies in the web resource dependency list. The key will be the attribute logical name.",
+            "body": "Xrm.Utility.getGlobalContext().organizationSettings.attributes;"
+        }
+    },
+    {
+        "Get Global Context Organization Settings Base Currency Id": {
+            "prefix": "XrmUtilityGetGlobalContextOrganizationSettingsBaseCurrencyId",
+            "description": "Returns the ID of the base currency for the current organization.",
+            "body": "Xrm.Utility.getGlobalContext().organizationSettings.baseCurrencyId;"
+        }
+    },
+    {
+        "Get Global Context Organization Settings Default Country Code": {
+            "prefix": "XrmUtilityGetGlobalContextOrganizationSettingsDefaultCountryCode",
+            "description": "Returns the default country/region code for phone numbers for the current organization.",
+            "body": "Xrm.Utility.getGlobalContext().organizationSettings.defaultCountryCode;"
+        }
+    },
+    {
+        "Get Global Context Organization Settings Is Auto Save Enabled": {
+            "prefix": "XrmUtilityGetGlobalContextOrganizationSettingsIsAutoSaveEnabled",
+            "description": "Indicates whether the auto-save option is enabled for the current organization.",
+            "body": "Xrm.Utility.getGlobalContext().organizationSettings.isAutoSaveEnabled;"
+        }
+    },
+    {
+        "Get Global Context Organization Settings Language Id": {
+            "prefix": "XrmUtilityGetGlobalContextOrganizationSettingsLanguageId",
+            "description": "Returns the preferred language ID for the current organization.",
+            "body": "Xrm.Utility.getGlobalContext().organizationSettings.languageId;"
+        }
+    },
+    {
+        "Get Global Context Organization Settings Organization Id": {
+            "prefix": "XrmUtilityGetGlobalContextOrganizationSettingsOrganizationId",
+            "description": "Returns the ID of the current organization.",
+            "body": "Xrm.Utility.getGlobalContext().organizationSettings.organizationId;"
+        }
+    },
+    {
+        "Get Global Context Organization Settings Unique Name": {
+            "prefix": "XrmUtilityGetGlobalContextOrganizationSettingsUniqueName",
+            "description": "Returns the unique name of the current organization.",
+            "body": "Xrm.Utility.getGlobalContext().organizationSettings.uniqueName;"
+        }
+    },
+    {
+        "Get Global Context Organization Settings Use Skype Protocol": {
+            "prefix": "XrmUtilityGetGlobalContextOrganizationSettingsUseSkypeProtocol",
+            "description": "Indicates whether the Skype protocol is used for the current organization.",
+            "body": "Xrm.Utility.getGlobalContext().organizationSettings.useSkypeProtocol;"
+        }
+    },
+    {
+        "Get Global Context User Settings": {
+            "prefix": "XrmUtilityGetGlobalContextUserSettings",
+            "description": "Returns information about the current user settings.",
+            "body": "Xrm.Utility.getGlobalContext().userSettings;"
+        }
+    },
+    {
+        "Get Global Context User Settings Date Formatting Info": {
+            "prefix": "XrmUtilityGetGlobalContextUserSettingsDateFormattingInfo",
+            "description": "Returns the date formatting information for the current user.",
+            "body": "Xrm.Utility.getGlobalContext().userSettings.dateFormattingInfo;"
+        }
+    },
+    {
+        "Get Global Context User Settings Default Dashboard Id": {
+            "prefix": "XrmUtilityGetGlobalContextUserSettingsDefaultDashboardId",
+            "description": "Returns the ID of the default dashboard for the current user.",
+            "body": "Xrm.Utility.getGlobalContext().userSettings.defaultDashboardId;"
+        }
+    },
+    {
+        "Get Global Context User Settings Is Guided Help Enabled": {
+            "prefix": "XrmUtilityGetGlobalContextUserSettingsIsGuidedHelpEnabled",
+            "description": "Indicates whether guided help is enabled for the current user.",
+            "body": "Xrm.Utility.getGlobalContext().userSettings.isGuidedHelpEnabled;"
+        }
+    },
+    {
+        "Get Global Context User Settings Is High Contrast Enabled": {
+            "prefix": "XrmUtilityGetGlobalContextUserSettingsIsHighContrastEnabled",
+            "description": "Indicates whether high contrast is enabled for the current user.",
+            "body": "Xrm.Utility.getGlobalContext().userSettings.isHighContrastEnabled;"
+        }
+    },
+    {
+        "Get Global Context User Settings Is RTL": {
+            "prefix": "XrmUtilityGetGlobalContextUserSettingsIsRTL",
+            "description": "Indicates whether the language for the current user is a right-to-left (RTL) language.",
+            "body": "Xrm.Utility.getGlobalContext().userSettings.isRTL;"
+        }
+    },
+    {
+        "Get Global Context User Settings Language Id": {
+            "prefix": "XrmUtilityGetGlobalContextUserSettingsLanguageId",
+            "description": "Returns the language ID for the current user.",
+            "body": "Xrm.Utility.getGlobalContext().userSettings.languageId;"
+        }
+    },
+    {
+        "Get Global Context User Settings Security Role Privileges": {
+            "prefix": "XrmUtilityGetGlobalContextUserSettingsSecurityRolePrivileges",
+            "description": "Returns an array of strings that represent the GUID values of each of the security role privilege that the user is associated with or any teams that the user is associated with.",
+            "body": "Xrm.Utility.getGlobalContext().userSettings.securityRolePrivileges;"
+        }
+    },
+    {
+        "Get Global Context User Settings Security Roles": {
+            "prefix": "XrmUtilityGetGlobalContextUserSettingsSecurityRoles",
+            "description": "Returns an array of strings that represent the GUID values of each of the security role that the user is associated with or any teams that the user is associated with.",
+            "body": "Xrm.Utility.getGlobalContext().userSettings.securityRoles;"
+        }
+    },
+    {
+        "Get Global Context User Settings Transaction Currency Id": {
+            "prefix": "XrmUtilityGetGlobalContextUserSettingsTransactionCurrencyId",
+            "description": "Returns the transaction currency ID for the current user.",
+            "body": "Xrm.Utility.getGlobalContext().userSettings.transactionCurrencyId;"
+        }
+    },
+    {
+        "Get Global Context User Settings User Id": {
+            "prefix": "XrmUtilityGetGlobalContextUserSettingsUserId",
+            "description": "Returns the GUID of the SystemUser.Id value for the current user.",
+            "body": "Xrm.Utility.getGlobalContext().userSettings.userId;"
+        }
+    },
+    {
+        "Get Global Context User Settings User Name": {
+            "prefix": "XrmUtilityGetGlobalContextUserSettingsUserName",
+            "description": "Returns the name of the current user.",
+            "body": "Xrm.Utility.getGlobalContext().userSettings.userName;"
+        }
+    },
+    {
+        "Get Global Context User Settings Get Time Zone Offset Minutes": {
+            "prefix": "XrmUtilityGetGlobalContextUserSettingsGetTimeZoneOffsetMinutes",
+            "description": "Returns the difference in minutes between the local time and Coordinated Universal Time (UTC).",
+            "body": "Xrm.Utility.getGlobalContext().userSettings.getTimeZoneOffsetMinutes;"
+        }
+    },
+    {
+        "Get Global Context Get Advanced Config Setting": {
+            "prefix": "XrmUtilityGetGlobalContextGetAdvancedConfigSetting",
+            "description": "Returns information about the advanced configuration settings for the organization.",
+            "body": "Xrm.Utility.getGlobalContext().getAdvancedConfigSetting('${1|MaxChildIncidentNumber,MaxIncidentMergeNumber|}');"
+        }
+    },
+    {
+        "Get Global Context Get Client Url": {
+            "prefix": "XrmUtilityGetGlobalContextGetUrl",
+            "description": "Returns the base URL that was used to access the application.",
+            "body": "Xrm.Utility.getGlobalContext().getClientUrl();"
+        }
+    },
+    {
+        "Get Global Context Get Current App Name": {
+            "prefix": "XrmUtilityGetGlobalContextGetCurrentAppName",
+            "description": "Returns the name of the current business app in Customer Engagement.",
+            "body": [
+                "Xrm.Utility.getGlobalContext().getCurrentAppName().then(",
+                "\tfunction success(result) {",
+                "\t\t// perform operations on record creation",
+                "\t\t$0",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    },
+    {
+        "Get Global Context Get Current App Properties": {
+            "prefix": "XrmUtilityGetGlobalContextGetCurrentAppProperties",
+            "description": "Returns the properties of the current business app in Customer Engagement.",
+            "body": [
+                "Xrm.Utility.getGlobalContext().getCurrentAppProperties().then(",
+                "\tfunction success(result) {",
+                "\t\t// perform operations on record creation",
+                "\t\t$0",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    },
+    {
+        "Get Global Context Get Current App Url": {
+            "prefix": "XrmUtilityGetGlobalContextGetCurrentAppUrl",
+            "description": "Returns the URL of the current business app in Customer Engagement.",
+            "body": "Xrm.Utility.getGlobalContext().getCurrentAppUrl();"
+        }
+    },
+    {
+        "Get Global Context Get Version": {
+            "prefix": "XrmUtilityGetGlobalContextGetVersion",
+            "description": "Returns the version number of the Dynamics 365 for Customer Engagement apps instance.",
+            "body": "Xrm.Utility.getGlobalContext().getVersion();"
+        }
+    },
+    {
+        "Get Global Context Is On Premises": {
+            "prefix": "XrmUtilityGetGlobalContextIsOnPremises",
+            "description": "Returns a boolean value indicating if the Customer Engagement instance is hosted on-premises or online.",
+            "body": "Xrm.Utility.getGlobalContext().isOnPremises();"
+        }
+    },
+    {
+        "Get Global Context Prepend Org Name": {
+            "prefix": "XrmUtilityGetGlobalContextPrependOrgName",
+            "description": "Prefixes the current organization's unique name to a string, typically a URL path.",
+            "body": "Xrm.Utility.getGlobalContext().prependOrgName('${1:path}');"
+        }
+    },
+    {
         "Get Learning Path Attribute Name": {
             "prefix": "XrmUtilityGetLearningPathAttributeName",
             "description": "Returns the name of the DOM attribute expected by the Learning Path (guided help) Content Designer for identifying UI controls in the Dynamics 365 for Customer Engagement apps form.",
             "body": "Xrm.Utility.getLearningPathAttributeName();"
+        }
+    },
+    {
+        "Get Resource String": {
+            "prefix": "XrmUtilityGetResourceString",
+            "description": "Returns the localized string for a given key associated with the specified web resource.",
+            "body": "Xrm.Utility.getResourceString('${1:webResourceName}', ${2:key});"
         }
     },
     {

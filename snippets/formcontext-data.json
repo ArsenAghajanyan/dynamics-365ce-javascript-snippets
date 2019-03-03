@@ -167,56 +167,56 @@
         }
     },
     {
-        "Data Entity Add On Process Status Change": {
-            "prefix": "FormContextDataEntityAddOnProcessStatusChange",
+        "Data Process Add On Process Status Change": {
+            "prefix": "FormContextDataProcessddOnProcessStatusChange",
             "description": "Adds a function as an event handler for the OnProcessStatusChange event so that it will be called when the business process flow status changes.",
             "body": [
-                "formContext.data.entity.addOnProcessStatusChange(${1:myFunction});"
+                "formContext.data.Process.addOnProcessStatusChange(${1:myFunction});"
             ]
         }
     },
     {
-        "Data Entity Add On Stage Change": {
-            "prefix": "FormContextDataEntityAddOnStageChange",
+        "Data Process Add On Stage Change": {
+            "prefix": "FormContextDataProcessAddOnStageChange",
             "description": "Adds a function as an event handler for the OnStageChange event so that it will be called when the business process flow stage changes.",
             "body": [
-                "formContext.data.entity.addOnStageChange(${1:myFunction});"
+                "formContext.data.process.addOnStageChange(${1:myFunction});"
             ]
         }
     },
     {
-        "Data Entity Add On Stage Selected": {
-            "prefix": "FormContextDataEntityAddOnStageSelected",
+        "Data Process Add On Stage Selected": {
+            "prefix": "FormContextDataProcessAddOnStageSelected",
             "description": "Adds a function as an event handler for the OnStageSelected event so that it will be called when a business process flow stage is selected.",
             "body": [
-                "formContext.data.entity.addOnStageSelected(${1:myFunction});"
+                "formContext.data.process.addOnStageSelected(${1:myFunction});"
             ]
         }
     },
     {
-        "Data Entity Remove On Process Status Change": {
-            "prefix": "FormContextDataEntityRemoveOnProcessStatusChange",
+        "Data Process Remove On Process Status Change": {
+            "prefix": "FormContextDataProcessRemoveOnProcessStatusChange",
             "description": "Removes an event handler from the OnProcessStatusChange event.",
             "body": [
-                "formContext.data.entity.removeOnProcessStatusChange(${1:myFunction});"
+                "formContext.data.process.removeOnProcessStatusChange(${1:myFunction});"
             ]
         }
     },
     {
-        "Data Entity Remove On Stage Change": {
-            "prefix": "FormContextDataEntityRemoveOnStageChange",
+        "Data Process Remove On Stage Change": {
+            "prefix": "FormContextDataProcessRemoveOnStageChange",
             "description": "Removes an event handler from the OnStageChange event.",
             "body": [
-                "formContext.data.entity.RemoveOnStageChange(${1:myFunction});"
+                "formContext.data.process.removeOnStageChange(${1:myFunction});"
             ]
         }
     },
     {
-        "Data Entity Remove On Stage Selected": {
-            "prefix": "FormContextDataEntityRemoveOnStageSelected",
+        "Data Process Remove On Stage Selected": {
+            "prefix": "FormContextDataProcessRemoveOnStageSelected",
             "description": "Removes an event handler from the OnStageSelected event.",
             "body": [
-                "formContext.data.entity.removeOnStageSelected(${1:myFunction});"
+                "formContext.data.process.removeOnStageSelected(${1:myFunction});"
             ]
         }
     },

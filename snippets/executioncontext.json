@@ -3,81 +3,63 @@
         "Get Depth": {
             "prefix": "ExecutionContextGetDepth",
             "description": "Returns a value that indicates the order in which this handler is executed.",
-            "body": [
-                "executionContext.getDepth();"
-            ]
+            "body": "executionContext.getDepth();"
         }
     },
     {
         "Get Event Arguments": {
             "prefix": "ExecutionContextGetEventArgs",
             "description": "Returns an object with methods to manage the Save event.",
-            "body": [
-                "executionContext.getEventArgs();"
-            ]
+            "body": "executionContext.getEventArgs();"
         }
     },
     {
         "Get Event Source": {
             "prefix": "ExecutionContextGetEventSource",
             "description": "Returns a reference to the object that the event occurred on.",
-            "body": [
-                "executionContext.getEventSource();"
-            ]
+            "body": "executionContext.getEventSource();"
         }
     },
     {
         "Get Form Context": {
             "prefix": "ExecutionContextGetFormContext",
             "description": "Returns a reference to the form or an item on the form depending on where the method was called.",
-            "body": [
-                "executionContext.GetFormContext();"
-            ]
+            "body": "executionContext.getFormContext();"
         }
     },
     {
         "Get Shared Variable": {
             "prefix": "ExecutionContextGetSharedVariable",
             "description": "Retrieves a variable set using the setSharedVariable method.",
-            "body": [
-                "executionContext.getSharedVariable(${1:key});"
-            ]
+            "body": "executionContext.getSharedVariable(${1:key});"
         }
     },
     {
         "Set Shared Variable": {
             "prefix": "ExecutionContextSetSharedVariable",
             "description": "Sets the value of a variable to be used by a handler after the current handler completes.",
-            "body": [
-                "executionContext.SetSharedVariable(${1:key}, ${2:value});"
-            ]
+            "body": "executionContext.setSharedVariable(${1:key}, ${2:value});"
         }
     },
     {
         "Get Save Mode": {
             "prefix": "ExecutionContextGetSaveMode",
             "description": "Returns a value indicating how the save event was initiated by the user.",
-            "body": [
-                "executionContext.getEventArgs().getSaveMode();"
-            ]
+            "body": "executionContext.getEventArgs().getSaveMode();"
         }
     },
     {
         "Is Default Prevented": {
             "prefix": "ExecutionContextIsDefaultPrevented",
             "description": "Returns a value indicating whether the save event has been canceled because the preventDefault method was used in this event handler or a previous event handler.",
-            "body": [
-                "executionContext.getEventArgs().isDefaultPrevented();"
-            ]
+            "body": "executionContext.getEventArgs().isDefaultPrevented();"
         }
     },
     {
         "Prevent Default": {
             "prefix": "ExecutionContextPreventDefault",
             "description": "Cancels the save operation, but all remaining handlers for the event will still be executed.",
-            "body": [
-                "executionContext.getEventArgs().preventDefault();"
-            ]
+            "body": "executionContext.getEventArgs().preventDefault();"
         }
     }
 ]
