@@ -3,45 +3,35 @@
         "Get Attribute": {
             "prefix": "StepObjGetAttribute",
             "description": "Returns the logical name of the attribute associated to the step.",
-            "body": [
-                "stepObj.getAttribute();"
-            ]
+            "body": "stepObj.getAttribute();"
         }
     },
     {
         "Get Name": {
             "prefix": "StepObjGetName",
             "description": "Returns the name of the step.",
-            "body": [
-                "stepObj.getName();"
-            ]
+            "body": "stepObj.getName();"
         }
     },
     {
         "Get Progress": {
             "prefix": "StepObjGetProgress",
             "description": "Returns the progress of the action step.",
-            "body": [
-                "stepObj.getProgress();"
-            ]
+            "body": "stepObj.getProgress();"
         }
     },
     {
         "Is Required": {
             "prefix": "StepObjIsRequired",
             "description": "Returns a boolean value indicating whether the step is required in the business process flow.",
-            "body": [
-                "stepObj.isRequired();"
-            ]
+            "body": "stepObj.isRequired();"
         }
     },
     {
         "Set Progress": {
             "prefix": "StepObjSetProgress",
             "description": "Updates the progress of the action step.",
-            "body": [
-                "stepObj.setProgress(${1:0|1|2|3|4}, '${2:message}');"
-            ]
+            "body": "stepObj.setProgress(${1|0,1,2,3,4|}, '${2:message}');"
         }
     }
 ]

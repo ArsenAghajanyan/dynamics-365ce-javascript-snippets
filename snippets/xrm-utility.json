@@ -331,6 +331,50 @@
         }
     },
     {
+        "Invoke Process Action": {
+            "prefix": "XrmUtilityInvokeProcessAction",
+            "description": "Invokes an action based on the specified parameters.",
+            "body": [
+                "Xrm.Utility.invokeProcessAction('${1:name}', ${2:parameters}).then(",
+                "\tfunction success(result) {",
+                "\t\t$0",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    },
+    {
+        "Lookup Objects": {
+            "prefix": "XrmUtilityLookupObjects",
+            "description": "Opens a lookup control to select one or more items.",
+            "body": [
+                "var lookupObjects = {",
+                "\tallowMultiSelect: ${1:|true,false|},",
+                "\tdefaultEntityType: '${2:account}',",
+                "\tdefaultViewId: '${3:00000000-0000-0000-0000-000000000001}',",
+                "\tdisableMru: ${4:|true,false|},",
+                "\tentityTypes: [ '${5:account}' ],",
+                "\tshowBarcodeScanner: {6:|true,false|},",
+                "\tviewIds: [ '${7:00000000-0000-0000-0000-000000000001}' ],",
+                "\tfilters: [{ filterXml: ${8:fetchXml}, entityLogicalName: '${9:account}' }]",
+                "",
+                "Xrm.Utility.lookupObjects(lookupOptions).then(",
+                "\tfunction success(result) {",
+                "\t\t$0",
+                "\t},",
+                "\tfunction (error) {",
+                "\t\tconsole.log(error.message);",
+                "\t\t// handle error conditions",
+                "\t}",
+                ");"
+            ]
+        }
+    },
+    {
         "Refresh Parent Grid": {
             "prefix": "XrmUtilityRefreshParentGrid",
             "description": "Refreshes the parent grid containing the specified record.",

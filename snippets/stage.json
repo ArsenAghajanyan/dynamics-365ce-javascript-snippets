@@ -3,36 +3,28 @@
         "Get Category": {
             "prefix": "StageObjGetCategoryGetValue",
             "description": "Returns an object with a getValue method which will return the integer value of the business process flow category.",
-            "body": [
-                "stageObj.getCategory().getValue();"
-            ]
+            "body": "stageObj.getCategory().getValue();"
         }
     },
     {
         "Get Entity Name": {
             "prefix": "StageObjGetEntityName",
             "description": "Returns the logical name of the entity associated with the stage.",
-            "body": [
-                "stageObj.getEntityName();"
-            ]
+            "body": "stageObj.getEntityName();"
         }
     },
     {
         "Get Id": {
             "prefix": "StageObjGetId",
             "description": "Returns the unique identifier of the stage.",
-            "body": [
-                "stageObj.getId();"
-            ]
+            "body": "stageObj.getId();"
         }
     },
     {
         "Get Name": {
             "prefix": "StageObjGetName",
             "description": "Returns the name of the stage.",
-            "body": [
-                "stageObj.getName();"
-            ]
+            "body": "stageObj.getName();"
         }
     },
     {
@@ -50,18 +42,14 @@
         "Get Status": {
             "prefix": "StageObjGetStatus",
             "description": "Returns the status of the stage.",
-            "body": [
-                "stageObj.getStatus();"
-            ]
+            "body": "stageObj.getStatus();"
         }
     },
     {
         "Get Steps": {
             "prefix": "StageObjGetSteps",
             "description": "Returns a collection of steps in the stage.",
-            "body": [
-                "stageObj.getSteps();"
-            ]
+            "body": "stageObj.getSteps();"
         }
     }
 ]
