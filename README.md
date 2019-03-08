@@ -17,6 +17,6 @@ See the <a href="https://github.com/ArsenAghajanyan/dynamics-365ce-javascript-sn
 
 ## Resources
 
-<a href="https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference" target="_blank">Official Dynamics 365 Customer Engagement Documentation</a>
-<a href="https://github.com/ArsenAghajanyan/dynamics-365ce-javascript-snippets" target="_blank">Github Extension Link</a>
-<a href=" https://marketplace.visualstudio.com/items?itemName=arsenaghajanyan.dynamics-365ce-javascript-snippets" target="_blank">Visual Studio Marketplace</a>
+<a href="https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference" target="_blank">Official Dynamics 365 Customer Engagement Documentation</a><br/>
+<a href="https://github.com/ArsenAghajanyan/dynamics-365ce-javascript-snippets" target="_blank">Github Extension Link</a><br/>
+<a href="https://marketplace.visualstudio.com/items?itemName=arsenaghajanyan.dynamics-365ce-javascript-snippets" target="_blank">Visual Studio Marketplace</a>
