@@ -38,7 +38,7 @@
         "Set Visible": {
             "prefix": "SectionObjSetVisible",
             "description": "Sets a value that indicates whether the section is visible.",
-            "body": "sectionObj.setVisible(${1:true|false});"
+            "body": "sectionObj.setVisible(${1|true,false|});"
         }
     }
 ]

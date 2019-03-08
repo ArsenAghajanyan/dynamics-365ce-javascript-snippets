@@ -52,7 +52,7 @@
         "Set Display State": {
             "prefix": "TabObjSetDisplayState",
             "description": "Sets display state of the tab.",
-            "body": "tabObj.setDisplayState('${1:expanded|collapsed}');"
+            "body": "tabObj.setDisplayState('${1|expanded,collapsed|}');"
         }
     },
     {
@@ -73,7 +73,7 @@
         "Set Visible": {
             "prefix": "TabObjSetVisible",
             "description": "Sets a value that indicates whether the tab is visible.",
-            "body": "tabObj.setVisible(${1:true|false});"
+            "body": "tabObj.setVisible(${1|true,false|});"
         }
     },
     {

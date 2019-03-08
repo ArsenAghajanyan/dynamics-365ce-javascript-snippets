@@ -66,7 +66,7 @@
         "Set Disabled": {
             "prefix": "QuickViewControlSetDisabled",
             "description": "Sets the state of the control to either enabled or disabled.",
-            "body": "quickViewControl.setDisabled(${1:true|false});"
+            "body": "quickViewControl.setDisabled(${1|true,false|});"
         }
     },
     {
@@ -87,7 +87,7 @@
         "Set Visible": {
             "prefix": "QuickViewControlSetVisible",
             "description": "Displays or hides a control.",
-            "body": "quickViewControl.setVisible(${1:true|false});"
+            "body": "quickViewControl.setVisible(${1|true,false|});"
         }
     }
 ]

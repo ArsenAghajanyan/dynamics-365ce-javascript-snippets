@@ -38,7 +38,7 @@
         "Set Visible": {
             "prefix": "NavigationItemSetVisible",
             "description": "Sets a value that indicates whether the item is visible.",
-            "body": "navigationItem.setVisible(${1:true|false});"
+            "body": "navigationItem.setVisible(${1|true,false|});"
         }
     }
 ]

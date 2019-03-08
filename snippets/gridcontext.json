@@ -24,7 +24,7 @@
         "Get Grid": {
             "prefix": "GridContextGetGrid",
             "description": "Get access to the Grid available in the GridControl (gridContext).",
-            "body": "gridContext.getGrid();;"
+            "body": "gridContext.getGrid();"
         }
     },
     {
@@ -73,7 +73,7 @@
         "Get Url": {
             "prefix": "GridContextGetUrl",
             "description": "Gets the URL of the current grid control.",
-            "body": "gridContext.getUrl(${1:0|1});"
+            "body": "gridContext.getUrl(${1|0,1|});"
         }
     },
     {

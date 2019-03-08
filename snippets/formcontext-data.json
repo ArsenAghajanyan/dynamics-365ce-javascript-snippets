@@ -25,8 +25,8 @@
             "prefix": "FormContextDataRefresh",
             "description": "Asynchronously refreshes and optionally saves all the data of the form without reloading the page.",
             "body": [
-                "formContext.data.refresh(${1:true|false}).then(",
-                "\tfunction success(result) {",
+                "formContext.data.refresh(${1|true,false|}).then(",
+                "\tfunction success() {",
                 "\t\t// perform operations on refresh",
                 "\t\t$0",
                 "\t},",
@@ -51,12 +51,12 @@
             "description": "Gets a boolean value indicating whether the form data has been modified.",
             "body": [
                 "var saveOptions = {",
-                "\tsaveMode: ${1:1}",
-                "\tuseSchedulingEngine: ${2:true|false}",
+                "\tsaveMode: ${1:1},",
+                "\tuseSchedulingEngine: ${2|true,false|}",
                 "};",
                 "",
                 "formContext.data.save(saveOptions).then(",
-                "\tfunction success(result) {",
+                "\tfunction success() {",
                 "\t\t// perform operations on refresh",
                 "\t\t$0",
                 "\t},",
@@ -79,7 +79,7 @@
         "Data Entity Get Data Xml": {
             "prefix": "FormContextDataEntityGetDataXml",
             "description": "Returns a string representing the XML that will be sent to the server when the record is saved. Only data in fields that have changed are set to the server.",
-            "body": "formContext.data.entity.getDataXml();;"
+            "body": "formContext.data.entity.getDataXml();"
         }
     },
     {
@@ -135,14 +135,14 @@
         "Data Entity Save": {
             "prefix": "FormContextDataEntitySave",
             "description": "Saves the record synchronously with the options to close the form or open a new form after the save is completed.",
-            "body": "formContext.data.entity.save('${1:saveandclose|saveandnew}');"
+            "body": "formContext.data.entity.save('${1|saveandclose,saveandnew|}');"
         }
     },
     {
         "Data Process Add On Process Status Change": {
             "prefix": "FormContextDataProcessddOnProcessStatusChange",
             "description": "Adds a function as an event handler for the OnProcessStatusChange event so that it will be called when the business process flow status changes.",
-            "body": "formContext.data.Process.addOnProcessStatusChange(${1:myFunction});"
+            "body": "formContext.data.process.addOnProcessStatusChange(${1:myFunction});"
         }
     },
     {
@@ -198,14 +198,14 @@
         "Data Process Get Enabled Processes": {
             "prefix": "FormContextDataProcessGetEnabledProcesses",
             "description": "Asynchronously retrieves the business process flows enabled for an entity that the current user can switch to.",
-            "body": "formContext.data.process.getEnabledProcesses(${1:callbackFunction(enabledProcesses)});"
+            "body": "formContext.data.process.getEnabledProcesses(${1:callbackFunction}(enabledProcesses));"
         }
     },
     {
         "Data Process Get Process Instances": {
             "prefix": "FormContextDataProcessGetProcessInstances",
             "description": "Returns all the process instances for the entity record that the calling user has access to.",
-            "body": "formContext.data.process.getProcessInstances(${1:callbackFunction(object)});"
+            "body": "formContext.data.process.getProcessInstances(${1:callbackFunction}(object));"
         }
     },
     {
@@ -240,7 +240,7 @@
         "Data Process Set Status": {
             "prefix": "FormContextDataProcessSetStatus",
             "description": "Sets the current status of the active process instance.",
-            "body": "formContext.data.process.setStatus('${1:active|aborted|finished}', ${2:callbackFunction});"
+            "body": "formContext.data.process.setStatus('${1|active,aborted,finished|}', ${2:callbackFunction});"
         }
     },
     {
