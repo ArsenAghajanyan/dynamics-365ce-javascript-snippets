@@ -4,7 +4,7 @@ Javascript code snippets for Dynamics 365 Customer Engagement v9. This includes 
 
 ## Demonstration
 
-
+![demonstration](https://github.com/ArsenAghajanyan/dynamics-365ce-javascript-snippets/blob/master/extras/demonstration.gif?raw=true, "SnippetDemonstration")
 
 ## Features
 
