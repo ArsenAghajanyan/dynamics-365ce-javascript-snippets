@@ -1,6 +1,6 @@
 # Dynamics 365CE Javascript Snippets 
 
-Javascript code snippets for Dynamics 365 Customer Engagement v9. This includes all the methods specified in the [official documentation.](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference){:target="_blank" rel="noopener"}
+Javascript code snippets for Dynamics 365 Customer Engagement v9. This includes all the methods specified in the <a href="https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference" target="_blank">official documentation.</a>
 
 ## Demonstration
 
@@ -9,11 +9,11 @@ Javascript code snippets for Dynamics 365 Customer Engagement v9. This includes 
 ## Features
 
 This extension includes all the methods specified in the official Dynamics 365 Customer Engagement v9 documentation. 
-It follows the naming of the documentation 
+It follows the naming specified in the documentation (executionContext, formContext, etc.)
 
-See the [CHANGELOG](javascript-snippets/blob/master/CHANGELOG.md){:target="_blank" rel="noopener"} for the latest changes
+See the <a href="https://github.com/ArsenAghajanyan/dynamics-365ce-javascript-snippets/blob/master/CHANGELOG.md" target="_blank">CHANGELOG</a> for the latest changes.
 
 ## Resources
 
-[Official Dynamics 365 Customer Engagement Documentation](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference){:target="_blank" rel="noopener"}
-[Github Extension Link](https://github.com/ArsenAghajanyan/dynamics-365ce-javascript-snippets){:target="_blank" rel="noopener"}
+<a href="https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference" target="_blank">Official Dynamics 365 Customer Engagement Documentation</a>
+<a href="https://github.com/ArsenAghajanyan/dynamics-365ce-javascript-snippets" target="_blank">Github Extension Link</a>
