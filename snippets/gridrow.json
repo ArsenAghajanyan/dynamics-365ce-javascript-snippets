@@ -1,44 +1,32 @@
-[
-    {
-        "Get Data": {
-            "prefix": "GridRowData",
-            "description": "Returns the GridRowData for the GridRow.",
-            "body": "gridRow.data;"
-        }
+{
+    "Get Data": {
+        "prefix": "GridRowData",
+        "description": "Returns the GridRowData for the GridRow.",
+        "body": "gridRow.data;"
     },
-    {
-        "Get Data Get Entity": {
-            "prefix": "GridRowDataEntity",
-            "description": "Returns the GridEntity for the GridRowData.",
-            "body": "gridRow.data.entity;"
-        }
+    "Get Data Get Entity": {
+        "prefix": "GridRowDataEntity",
+        "description": "Returns the GridEntity for the GridRowData.",
+        "body": "gridRow.data.entity;"
     },
-    {
-        "Get Entity Name": {
-            "prefix": "GridRowDataEntityGetEntityName",
-            "description": "Returns the logical name for the record in the row.",
-            "body": "gridRow.data.entity.getEntityName();"
-        }
+    "Get Entity Name": {
+        "prefix": "GridRowDataEntityGetEntityName",
+        "description": "Returns the logical name for the record in the row.",
+        "body": "gridRow.data.entity.getEntityName();"
     },
-    {
-        "Get Entity Reference": {
-            "prefix": "GridRowDataEntityGetEntityReference",
-            "description": "Returns a Lookup value that references the record in the row.",
-            "body": "gridRow.data.entity.getEntityReference();"
-        }
+    "Get Entity Reference": {
+        "prefix": "GridRowDataEntityGetEntityReference",
+        "description": "Returns a Lookup value that references the record in the row.",
+        "body": "gridRow.data.entity.getEntityReference();"
     },
-    {
-        "Get Id": {
-            "prefix": "GridRowDataEntityGetId",
-            "description": "Returns the Id for the record in the row.",
-            "body": "gridRow.data.entity.getId();"
-        }
+    "Get Id": {
+        "prefix": "GridRowDataEntityGetId",
+        "description": "Returns the Id for the record in the row.",
+        "body": "gridRow.data.entity.getId();"
     },
-    {
-        "Get Primary Attribute Value": {
-            "prefix": "GridRowDataEntityGetPrimaryAttributeValue",
-            "description": "Returns the primary attribute value for the record in the row.",
-            "body": "gridRow.data.entity.getPrimaryAttributeValue();"
-        }
+    "Get Primary Attribute Value": {
+        "prefix": "GridRowDataEntityGetPrimaryAttributeValue",
+        "description": "Returns the primary attribute value for the record in the row.",
+        "body": "gridRow.data.entity.getPrimaryAttributeValue();"
     }
-]
+}

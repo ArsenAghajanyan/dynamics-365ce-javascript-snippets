@@ -1,30 +1,22 @@
-[
-    {
-        "Get Id": {
-            "prefix": "ProcObjGetId",
-            "description": "Returns the unique identifier of the process.",
-            "body": "procObj.getId();"
-        }
+{
+    "Get Id": {
+        "prefix": "ProcObjGetId",
+        "description": "Returns the unique identifier of the process.",
+        "body": "procObj.getId();"
     },
-    {
-        "Get Name": {
-            "prefix": "ProcObjGetName",
-            "description": "Returns the name of the process.",
-            "body": "procObj.getName();"
-        }
+    "Get Name": {
+        "prefix": "ProcObjGetName",
+        "description": "Returns the name of the process.",
+        "body": "procObj.getName();"
     },
-    {
-        "Get Stages": {
-            "prefix": "ProcObjGetStages",
-            "description": "Returns a collection of stages in the process.",
-            "body": "procObj.getStages();"
-        }
+    "Get Stages": {
+        "prefix": "ProcObjGetStages",
+        "description": "Returns a collection of stages in the process.",
+        "body": "procObj.getStages();"
     },
-    {
-        "Is Rendered": {
-            "prefix": "ProcObjIsRendered",
-            "description": "Returns a boolean value indicating whether the process is rendered.",
-            "body": "procObj.isRendered();"
-        }
+    "Is Rendered": {
+        "prefix": "ProcObjIsRendered",
+        "description": "Returns a boolean value indicating whether the process is rendered.",
+        "body": "procObj.isRendered();"
     }
-]
+}
