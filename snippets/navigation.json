@@ -1,44 +1,32 @@
-[
-    {
-        "Get Id": {
-            "prefix": "NavigationItemGetId",
-            "description": "Returns the name of the item.",
-            "body": "navigationItem.getId();"
-        }
+{
+    "Get Id": {
+        "prefix": "NavigationItemGetId",
+        "description": "Returns the name of the item.",
+        "body": "navigationItem.getId();"
     },
-    {
-        "Get Label": {
-            "prefix": "NavigationItemGetLabel",
-            "description": "Returns the label of the item.",
-            "body": "navigationItem.getLabel();"
-        }
+    "Get Label": {
+        "prefix": "NavigationItemGetLabel",
+        "description": "Returns the label of the item.",
+        "body": "navigationItem.getLabel();"
     },
-    {
-        "Get Visible": {
-            "prefix": "NavigationItemGetVisible",
-            "description": "Returns a value that indicates whether the item is currently visible.",
-            "body": "navigationItem.getVisible();"
-        }
+    "Get Visible": {
+        "prefix": "NavigationItemGetVisible",
+        "description": "Returns a value that indicates whether the item is currently visible.",
+        "body": "navigationItem.getVisible();"
     },
-    {
-        "Set Focus": {
-            "prefix": "NavigationItemSetFocus",
-            "description": "Sets the focus on the item.",
-            "body": "navigationItem.setFocus();"
-        }
+    "Set Focus": {
+        "prefix": "NavigationItemSetFocus",
+        "description": "Sets the focus on the item.",
+        "body": "navigationItem.setFocus();"
     },
-    {
-        "Set Label": {
-            "prefix": "NavigationItemSetLabel",
-            "description": "Sets the label for the item.",
-            "body": "navigationItem.setLabel('${1:label}');"
-        }
-    }, 
-    {
-        "Set Visible": {
-            "prefix": "NavigationItemSetVisible",
-            "description": "Sets a value that indicates whether the item is visible.",
-            "body": "navigationItem.setVisible(${1|true,false|});"
-        }
+    "Set Label": {
+        "prefix": "NavigationItemSetLabel",
+        "description": "Sets the label for the item.",
+        "body": "navigationItem.setLabel('${1:label}');"
+    },
+    "Set Visible": {
+        "prefix": "NavigationItemSetVisible",
+        "description": "Sets a value that indicates whether the item is visible.",
+        "body": "navigationItem.setVisible(${1|true,false|});"
     }
-]
+}

@@ -1,143 +1,105 @@
-[
-    {
-        "Add On Load": {
-            "prefix": "GridContextAddOnLoad",
-            "description": "Adds event handlers to the Subgrid OnLoad event event.",
-            "body": "gridContext.addOnLoad(${1:myFunction});"
-        }
+{
+    "Add On Load": {
+        "prefix": "GridContextAddOnLoad",
+        "description": "Adds event handlers to the Subgrid OnLoad event event.",
+        "body": "gridContext.addOnLoad(${1:myFunction});"
     },
-    {
-        "Get Entity Name": {
-            "prefix": "GridContextGetEntityName",
-            "description": "Gets the logical name of the entity data displayed in the grid.",
-            "body": "gridContext.getEntityName();"
-        }
+    "Get Entity Name": {
+        "prefix": "GridContextGetEntityName",
+        "description": "Gets the logical name of the entity data displayed in the grid.",
+        "body": "gridContext.getEntityName();"
     },
-    {
-        "Get Fetch Xml": {
-            "prefix": "GridContextGetFetchXml",
-            "description": "Gets the FetchXML query that represents the current data, including filtered and sorted data, in the grid control.",
-            "body": "gridContext.getFetchXml();"
-        }
+    "Get Fetch Xml": {
+        "prefix": "GridContextGetFetchXml",
+        "description": "Gets the FetchXML query that represents the current data, including filtered and sorted data, in the grid control.",
+        "body": "gridContext.getFetchXml();"
     },
-    {
-        "Get Grid": {
-            "prefix": "GridContextGetGrid",
-            "description": "Get access to the Grid available in the GridControl (gridContext).",
-            "body": "gridContext.getGrid();"
-        }
+    "Get Grid": {
+        "prefix": "GridContextGetGrid",
+        "description": "Get access to the Grid available in the GridControl (gridContext).",
+        "body": "gridContext.getGrid();"
     },
-    {
-        "Get Grid Get Rows": {
-            "prefix": "GridContextGetGridGetRows",
-            "description": "Returns a collection of every GridRow in the Grid.",
-            "body": "gridContext.getGrid().getRows();"
-        }
+    "Get Grid Get Rows": {
+        "prefix": "GridContextGetGridGetRows",
+        "description": "Returns a collection of every GridRow in the Grid.",
+        "body": "gridContext.getGrid().getRows();"
     },
-    {
-        "Get Grid Get Rows Get": {
-            "prefix": "GridContextGetGridGetRowsGet",
-            "description": "Returns a GridRow object from the collection of GridRows",
-            "body": "gridContext.getGrid().getRows().get(${1:args});"
-        }
+    "Get Grid Get Rows Get": {
+        "prefix": "GridContextGetGridGetRowsGet",
+        "description": "Returns a GridRow object from the collection of GridRows",
+        "body": "gridContext.getGrid().getRows().get(${1:args});"
     },
-    {
-        "Get Grid Get Selected Rows": {
-            "prefix": "GridContextGetGridGetSelectedRows",
-            "description": "Returns a collection of every selected GridRow in the Grid.",
-            "body": "gridContext.getGrid().getSelectedRows();"
-        }
+    "Get Grid Get Selected Rows": {
+        "prefix": "GridContextGetGridGetSelectedRows",
+        "description": "Returns a collection of every selected GridRow in the Grid.",
+        "body": "gridContext.getGrid().getSelectedRows();"
     },
-    {
-        "Get Grid Get Total Record Count": {
-            "prefix": "GridContextGetGridGetTotalRecordCount",
-            "description": "Returns the total number of records that match the filter criteria of the view, not limited by the number visible in a single page.",
-            "body": "gridContext.getGrid().getTotalRecordCount();"
-        }
+    "Get Grid Get Total Record Count": {
+        "prefix": "GridContextGetGridGetTotalRecordCount",
+        "description": "Returns the total number of records that match the filter criteria of the view, not limited by the number visible in a single page.",
+        "body": "gridContext.getGrid().getTotalRecordCount();"
     },
-    {
-        "Get Grid Type": {
-            "prefix": "GridContextGetGridType",
-            "description": "Gets the grid type (grid or subgrid).",
-            "body": "gridContext.getGridType();"
-        }
+    "Get Grid Type": {
+        "prefix": "GridContextGetGridType",
+        "description": "Gets the grid type (grid or subgrid).",
+        "body": "gridContext.getGridType();"
     },
-    {
-        "Get Relationship": {
-            "prefix": "GridContextGetRelationship",
-            "description": "Gets information about the relationship used to filter the subgrid.",
-            "body": "gridContext.getRelationship();"
-        }
+    "Get Relationship": {
+        "prefix": "GridContextGetRelationship",
+        "description": "Gets information about the relationship used to filter the subgrid.",
+        "body": "gridContext.getRelationship();"
     },
-    {
-        "Get Url": {
-            "prefix": "GridContextGetUrl",
-            "description": "Gets the URL of the current grid control.",
-            "body": "gridContext.getUrl(${1|0,1|});"
-        }
+    "Get Url": {
+        "prefix": "GridContextGetUrl",
+        "description": "Gets the URL of the current grid control.",
+        "body": "gridContext.getUrl(${1|0,1|});"
     },
-    {
-        "Get View Selector": {
-            "prefix": "GridContextGetViewSelector",
-            "description": "Use this method to access the ViewSelector methods available for the grid control.",
-            "body": "gridContext.getViewSelector();"
-        }
+    "Get View Selector": {
+        "prefix": "GridContextGetViewSelector",
+        "description": "Use this method to access the ViewSelector methods available for the grid control.",
+        "body": "gridContext.getViewSelector();"
     },
-    {
-        "Get View Selector Get Current View": {
-            "prefix": "GridContextGetViewSelectorGetCurrentView",
-            "description": "Gets a reference to the current view.",
-            "body": "gridContext.getViewSelector().getCurrentView();"
-        }
+    "Get View Selector Get Current View": {
+        "prefix": "GridContextGetViewSelectorGetCurrentView",
+        "description": "Gets a reference to the current view.",
+        "body": "gridContext.getViewSelector().getCurrentView();"
     },
-    {
-        "Get View Selector Is Visible": {
-            "prefix": "GridContextGetViewSelectorIsVisible",
-            "description": "Returns a boolean value to indicate whether the view selector is visible.",
-            "body": "gridContext.getViewSelector().isVisible();"
-        }
+    "Get View Selector Is Visible": {
+        "prefix": "GridContextGetViewSelectorIsVisible",
+        "description": "Returns a boolean value to indicate whether the view selector is visible.",
+        "body": "gridContext.getViewSelector().isVisible();"
     },
-    {
-        "Get View Selector Set Current View": {
-            "prefix": "GridContextGetViewSelectorSetCurrentView",
-            "description": "Sets the current view.",
-            "body": [
-                "var object = {",
-                "\tentityType = ${1:entityType},",
-                "\tid = ${2:id},",
-                "\tname = '${3:viewName}'",
-                "};",
-                "",
-                "gridContext.getViewSelector().setCurrentView(object);"
-            ]
-        }
+    "Get View Selector Set Current View": {
+        "prefix": "GridContextGetViewSelectorSetCurrentView",
+        "description": "Sets the current view.",
+        "body": [
+            "var object = {",
+            "\tentityType = ${1:entityType},",
+            "\tid = ${2:id},",
+            "\tname = '${3:viewName}'",
+            "};",
+            "",
+            "gridContext.getViewSelector().setCurrentView(object);"
+        ]
     },
-    {
-        "Open Related Grid": {
-            "prefix": "GridContextOpenRelatedGrid",
-            "description": "Displays the associated grid for the grid.",
-            "body": "gridContext.openRelatedGrid();"
-        }
+    "Open Related Grid": {
+        "prefix": "GridContextOpenRelatedGrid",
+        "description": "Displays the associated grid for the grid.",
+        "body": "gridContext.openRelatedGrid();"
     },
-    {
-        "Refresh": {
-            "prefix": "GridContextRefresh",
-            "description": "Refreshes the grid.",
-            "body": "gridContext.refresh();"
-        }
+    "Refresh": {
+        "prefix": "GridContextRefresh",
+        "description": "Refreshes the grid.",
+        "body": "gridContext.refresh();"
     },
-    {
-        "Refresh Ribbon": {
-            "prefix": "GridContextRefreshRibbon",
-            "description": "Refreshes the ribbon rules for the grid control.",
-            "body": "gridContext.refreshRibbon();"
-        }
+    "Refresh Ribbon": {
+        "prefix": "GridContextRefreshRibbon",
+        "description": "Refreshes the ribbon rules for the grid control.",
+        "body": "gridContext.refreshRibbon();"
     },
-    {
-        "Remove On Load": {
-            "prefix": "GridContextRemoveOnLoad",
-            "description": "Removes event handlers from the Subgrid OnLoad event event.",
-            "body": "gridContext.removeOnLoad(${1:myFunction});"
-        }
+    "Remove On Load": {
+        "prefix": "GridContextRemoveOnLoad",
+        "description": "Removes event handlers from the Subgrid OnLoad event event.",
+        "body": "gridContext.removeOnLoad(${1:myFunction});"
     }
-]
+}
