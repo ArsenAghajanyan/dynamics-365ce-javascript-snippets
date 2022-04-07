@@ -4,17 +4,17 @@ All notable changes to the "dynamics-365ce-javascript-snippets" extension will b
 ## [1.1.0]
 - Fixed updateRecord script in which it wrote createRecord instead of updateRecord.
 - Added snippets for the following
-1. Xrm.Utility.getEntityMainFormDescriptor(entityName, formId)
-2. Xrm.Utility.getGlobalContext().client.isNetworkAvailable()
-3. Xrm.Utility.getGlobalContext().organizationSettings.baseCurrency
-4. Xrm.Utility.getGlobalContext().organizationSettings.isTrialOrganization
-5. Xrm.Utility.getGlobalContext().organizationSettings.organizationExpiryDate
-6. Xrm.Utility.getGlobalContext().organizationSettings.fullNameConventionCode
-7. Xrm.Utility.getGlobalContext().userSettings.roles
-8. Xrm.Utility.getGlobalContext().userSettings.getSecurityRolePrivilegesInfo().then(successCallback, errorCallback)
-9. Xrm.Utility.getGlobalContext().userSettings.transactionCurrency
-10. Xrm.Utility.getGlobalContext().getWebResourceUrl(webResourceName)
-11. Xrm.Utility.getPageContext()
+ Xrm.Utility.getEntityMainFormDescriptor(entityName, formId)
+ Xrm.Utility.getGlobalContext().client.isNetworkAvailable()
+ Xrm.Utility.getGlobalContext().organizationSettings.baseCurrency
+ Xrm.Utility.getGlobalContext().organizationSettings.isTrialOrganization
+ Xrm.Utility.getGlobalContext().organizationSettings.organizationExpiryDate
+ Xrm.Utility.getGlobalContext().organizationSettings.fullNameConventionCode
+ Xrm.Utility.getGlobalContext().userSettings.roles
+ Xrm.Utility.getGlobalContext().userSettings.getSecurityRolePrivilegesInfo().then(successCallback, errorCallback)
+ Xrm.Utility.getGlobalContext().userSettings.transactionCurrency
+ Xrm.Utility.getGlobalContext().getWebResourceUrl(webResourceName)
+ Xrm.Utility.getPageContext()
 
 - Used let instead of var when initializing variables
 
