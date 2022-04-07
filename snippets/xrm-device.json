@@ -19,7 +19,7 @@
         "prefix": "XrmDeviceCaptureImage",
         "description": "Invokes the device camera to capture an image.",
         "body": [
-            "var imageOptions = {",
+            "let imageOptions = {",
             "\tallowEdit: ${1|true,false|},",
             "\theight: ${2:250},",
             "\twidth: ${3:400},",
@@ -91,7 +91,7 @@
         "prefix": "XrmDevicePickFile",
         "description": "Opens a dialog box to select files from your computer (web client) or mobile device (mobile clients).",
         "body": [
-            "var pickFileOptions = {",
+            "let pickFileOptions = {",
             "\taccept: '${1|audio,video,image|}',",
             "\tallowMultipleFiles: ${2|true,false|},",
             "\tmaximumAllowedFileSize: ${3:84},",

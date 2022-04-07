@@ -73,7 +73,7 @@
         "prefix": "GridContextGetViewSelectorSetCurrentView",
         "description": "Sets the current view.",
         "body": [
-            "var object = {",
+            "let object = {",
             "\tentityType = ${1:entityType},",
             "\tid = ${2:id},",
             "\tname = '${3:viewName}'",

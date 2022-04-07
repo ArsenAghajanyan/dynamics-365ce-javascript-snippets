@@ -36,6 +36,11 @@
             ");"
         ]
     },
+    "Get Entity Main Form Descriptor": {
+        "prefix": "XrmUtilityGetEntityMainFormDescriptor",
+        "description": "Returns the default main form descriptor for the specified table.",
+        "body": "Xrm.Utility.getEntityMainFormDescriptor('${1:account}', '${2:formId}');"
+    },
     "Get Global Context": {
         "prefix": "XrmUtilityGetGlobalContext",
         "description": "Gets the global context.",
@@ -66,6 +71,11 @@
         "description": "Returns information whether the server is online or offline.",
         "body": "Xrm.Utility.getGlobalContext().client.isOffline()"
     },
+    "Get Global Context Client Is Network Available": {
+        "prefix": "XrmUtilityGetGlobalContextClientIsNetworkAvailable",
+        "description": "Returns information whether the network is available or not.",
+        "body": "Xrm.Utility.getGlobalContext().client.isNetworkAvailable()"
+    },
     "Get Global Context Organization Settings": {
         "prefix": "XrmUtilityGetGlobalContextOrganizationSettings",
         "description": "Returns information about the current organization settings.",
@@ -80,6 +90,11 @@
         "prefix": "XrmUtilityGetGlobalContextOrganizationSettingsBaseCurrencyId",
         "description": "Returns the ID of the base currency for the current organization.",
         "body": "Xrm.Utility.getGlobalContext().organizationSettings.baseCurrencyId;"
+    },
+    "Get Global Context Organization Settings Base Currency": {
+        "prefix": "XrmUtilityGetGlobalContextOrganizationSettingsBaseCurrency",
+        "description": "Returns a lookup object containing the ID, name, and table type of the base currency for the current organization. This method is supported only on Unified Interface.",
+        "body": "Xrm.Utility.getGlobalContext().organizationSettings.baseCurrency;"
     },
     "Get Global Context Organization Settings Default Country Code": {
         "prefix": "XrmUtilityGetGlobalContextOrganizationSettingsDefaultCountryCode",
@@ -101,6 +116,16 @@
         "description": "Returns the ID of the current organization.",
         "body": "Xrm.Utility.getGlobalContext().organizationSettings.organizationId;"
     },
+    "Get Global Context Organization Settings Is Trial Organization": {
+        "prefix": "XrmUtilityGetGlobalContextOrganizationSettingsIsTrialOrganization",
+        "description": "Returns a boolean indicating whether the organization is a trial organization.",
+        "body": "Xrm.Utility.getGlobalContext().organizationSettings.isTrialOrganization;"
+    },
+    "Get Global Context Organization Settings Organization Expiry Date": {
+        "prefix": "XrmUtilityGetGlobalContextOrganizationSettingsOrganizationExpiryDate",
+        "description": "Returns the expiry date of the current organization if it is a trial organization.",
+        "body": "Xrm.Utility.getGlobalContext().organizationSettings.organizationExpiryDate;"
+    },
     "Get Global Context Organization Settings Unique Name": {
         "prefix": "XrmUtilityGetGlobalContextOrganizationSettingsUniqueName",
         "description": "Returns the unique name of the current organization.",
@@ -110,6 +135,11 @@
         "prefix": "XrmUtilityGetGlobalContextOrganizationSettingsUseSkypeProtocol",
         "description": "Indicates whether the Skype protocol is used for the current organization.",
         "body": "Xrm.Utility.getGlobalContext().organizationSettings.useSkypeProtocol;"
+    },
+    "Get Global Context Organization Settings Full Name Convention Code": {
+        "prefix": "XrmUtilityGetGlobalContextOrganizationSettingsFullNameConventionCode",
+        "description": "Returns the FullNameConventionCode setting of the current organization.",
+        "body": "Xrm.Utility.getGlobalContext().organizationSettings.fullNameConventionCode;"
     },
     "Get Global Context User Settings": {
         "prefix": "XrmUtilityGetGlobalContextUserSettings",
@@ -146,19 +176,45 @@
         "description": "Returns the language ID for the current user.",
         "body": "Xrm.Utility.getGlobalContext().userSettings.languageId;"
     },
+    "Get Global Context User Settings Roles": {
+        "prefix": "XrmUtilityGetGlobalContextUserSettingsRoles",
+        "description": "Returns a collection of lookup objects containing the GUID and display name of each of the security role assigned to the user and any security roles assigned to the team that the user is associated with. This method is supported only on Unified Interface.",
+        "body": "Xrm.Utility.getGlobalContext().userSettings.roles;"
+    },
     "Get Global Context User Settings Security Role Privileges": {
         "prefix": "XrmUtilityGetGlobalContextUserSettingsSecurityRolePrivileges",
         "description": "Returns an array of strings that represent the GUID values of each of the security role privilege that the user is associated with or any teams that the user is associated with.",
         "body": "Xrm.Utility.getGlobalContext().userSettings.securityRolePrivileges;"
     },
+    "Get Global Context User Settings Get Security Role Privileges Info": {
+        "prefix": "XrmUtilityGetGlobalContextUserSettingsGetSecurityRolePrivilegesInfo",
+        "description": "Returns a promise which resolves with an object whose keys are the security role privilege GUIDs and values are objects containing the businessUnitId, depth, and privilegeName of the security role privilege.",
+        "body": [
+            "Xrm.Utility.getGlobalContext().userSettings.getSecurityRolePrivilegesInfo().then(",
+            "\tfunction success(result) {",
+            "\t\t// perform operations on record creation",
+            "\t\t$0",
+            "\t},",
+            "\tfunction (error) {",
+            "\t\tconsole.log(error.message);",
+            "\t\t// handle error conditions",
+            "\t}",
+            ");"
+        ]
+    },
     "Get Global Context User Settings Security Roles": {
         "prefix": "XrmUtilityGetGlobalContextUserSettingsSecurityRoles",
-        "description": "Returns an array of strings that represent the GUID values of each of the security role that the user is associated with or any teams that the user is associated with.",
+        "description": "Returns an array of strings that represent the GUID values of each of the security role that the user is associated with or any teams that the user is associated with. Deprecated; use userSettings.roles instead to view the display names of security roles or teams along with the ID.",
         "body": "Xrm.Utility.getGlobalContext().userSettings.securityRoles;"
+    },
+    "Get Global Context User Settings Transaction Currency": {
+        "prefix": "XrmUtilityGetGlobalContextUserSettingsTransactionCurrency",
+        "description": "Returns a lookup object containing the ID, display name, and table type of the transaction currency for the current user. This method is supported only on Unified Interface.",
+        "body": "Xrm.Utility.getGlobalContext().userSettings.transactionCurrency;"
     },
     "Get Global Context User Settings Transaction Currency Id": {
         "prefix": "XrmUtilityGetGlobalContextUserSettingsTransactionCurrencyId",
-        "description": "Returns the transaction currency ID for the current user.",
+        "description": "Returns the transaction currency ID for the current user. Deprecated; use userSettings.transactionCurrency instead to access the display name along with the ID.",
         "body": "Xrm.Utility.getGlobalContext().userSettings.transactionCurrencyId;"
     },
     "Get Global Context User Settings User Id": {
@@ -228,6 +284,11 @@
         "description": "Returns the version number of the Dynamics 365 for Customer Engagement apps instance.",
         "body": "Xrm.Utility.getGlobalContext().getVersion();"
     },
+    "Get Global Context Get WebResource Url": {
+        "prefix": "XrmUtilityGetGlobalContextGetWebResourceUrl",
+        "description": "Returns the relative URL with the caching token for the specified web resource.",
+        "body": "Xrm.Utility.getGlobalContext().getWebResourceUrl('${1:webResourceName}');"
+    },
     "Get Global Context Is On Premises": {
         "prefix": "XrmUtilityGetGlobalContextIsOnPremises",
         "description": "Returns a boolean value indicating if the Customer Engagement instance is hosted on-premises or online.",
@@ -242,6 +303,11 @@
         "prefix": "XrmUtilityGetLearningPathAttributeName",
         "description": "Returns the name of the DOM attribute expected by the Learning Path (guided help) Content Designer for identifying UI controls in the Dynamics 365 for Customer Engagement apps form.",
         "body": "Xrm.Utility.getLearningPathAttributeName();"
+    },
+    "Get Page Context": {
+        "prefix": "XrmUtilityGetPageContext",
+        "description": "Gets the page context as an object representing the page.",
+        "body": "Xrm.Utility.getPageContext();"
     },
     "Get Resource String": {
         "prefix": "XrmUtilityGetResourceString",
@@ -267,7 +333,7 @@
         "prefix": "XrmUtilityLookupObjects",
         "description": "Opens a lookup control to select one or more items.",
         "body": [
-            "var lookupObjects = {",
+            "let lookupObjects = {",
             "\tallowMultiSelect: ${1|true,false|},",
             "\tdefaultEntityType: '${2:account}',",
             "\tdefaultViewId: '${3:00000000-0000-0000-0000-000000000001}',",
@@ -293,7 +359,7 @@
         "prefix": "XrmUtilityRefreshParentGrid",
         "description": "Refreshes the parent grid containing the specified record.",
         "body": [
-            "var lookupOptions = {",
+            "let lookupOptions = {",
             "\tentityType: '${1:entityType}',",
             "\tid: ${2:id},",
             "\tname: '${3:name}'",
