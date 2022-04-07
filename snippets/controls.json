@@ -57,6 +57,11 @@
             "});"
         ]
     },
+    "Control Add On Lookup Tag Click ": {
+        "prefix": "FormContextControlAddOnLookupTagClick ",
+        "description": "Adds an event handler to the OnLookupTagClick event.",
+        "body": "formContext.getControl('${1:fieldName}').addOnLookupTagClick(${2:myFunction});"
+    },
     "Control Add On Post Search": {
         "prefix": "FormContextControlAddOnPostSearch",
         "description": "Adds an event handler to the PostSearch event.",
@@ -154,6 +159,11 @@
         "description": "Returns the object in the form that represents an IFRAME or web resource.",
         "body": "formContext.getControl('${1:fieldName}').getObject();"
     },
+    "Control Get Options": {
+        "prefix": "FormContextControlGetOptions",
+        "description": "Returns an array of option objects representing valid options available for a control, including a blank option and excluding any options that have been removed from the control using removeOption.",
+        "body": "formContext.getControl('${1:fieldName}').getOptions();"
+    },
     "Control Get Parent": {
         "prefix": "FormContextControlGetParent",
         "description": "Returns a reference to the section object that contains the control.",
@@ -163,6 +173,11 @@
         "prefix": "FormContextControlGetSearchQuery",
         "description": "Gets the text used as the search criteria for the knowledge base management control.",
         "body": "formContext.getControl('${1:fieldName}').getSearchQuery();"
+    },
+    "Control Get Selected Results": {
+        "prefix": "FormContextControlGetSelectedResults",
+        "description": "Use this method to get the currently selected result of the search control. The currently selected result also represents the result that is currently open.",
+        "body": "formContext.getControl('${1:fieldName}').getSelectedResults();"
     },
     "Control Get Show Time": {
         "prefix": "FormContextControlGetShowTime",
@@ -203,6 +218,11 @@
         "prefix": "FormContextControlRefresh",
         "description": "Refreshes the data displayed in a timelinewall and timer control.",
         "body": "formContext.getControl('${1:fieldName}').refresh();"
+    },
+    "Control Remove On Lookup Tag Click": {
+        "prefix": "FormContextControlRemoveOnLookupTagClick",
+        "description": "Removes an event handler from the OnLookupTagClick event.",
+        "body": "formContext.getControl('${1:fieldName}').removeOnLookupTagClick(${2:myFunction});"
     },
     "Control Remove On Post Search": {
         "prefix": "FormContextControlRemoveOnPostSearch",

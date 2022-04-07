@@ -160,6 +160,13 @@
             "formContext.getAttribute('${1:fieldName}').removeOnChange(${2:myFunction});"
         ]
     },
+    "Attribute Set Is Valid": {
+        "prefix": "FormContextAttributeSetIsValid",
+        "description": "Sets a value for a column to determine whether it is valid or invalid with a message.",
+        "body": [
+            "formContext.getAttribute('${1:fieldName}').setIsValid(${2|true,false|}, '${3:message}');"
+        ]
+    },
     "Attribute Set Precision": {
         "prefix": "FormContextAttributeSetPrecision",
         "description": "Sets the number of digits allowed to the right of the decimal point.",

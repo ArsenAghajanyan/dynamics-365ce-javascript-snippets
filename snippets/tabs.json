@@ -4,6 +4,11 @@
         "description": "Adds a function to be called when the TabStateChange event occurs.",
         "body": "tabObj.addTabStateChange(${1:myFunction});"
     },
+    "Get Content Type": {
+        "prefix": "TabObjAddGetContentType",
+        "description": "Returns the content type.",
+        "body": "tabObj.getContentType();"
+    },
     "Get Display State": {
         "prefix": "TabObjAddGetDisplayState",
         "description": "Gets display state of the tab.",
@@ -33,6 +38,11 @@
         "prefix": "TabObjRemoveTabStateChange",
         "description": "Removes a function to be called when the TabStateChange event occurs.",
         "body": "tabObj.removeTabStateChange(${1:myFunction});"
+    },
+    "Set Content Type": {
+        "prefix": "TabObjSetContentType",
+        "description": "Sets the content type.",
+        "body": "tabObj.setContentType('${1:contentType}');"
     },
     "Set Display State": {
         "prefix": "TabObjSetDisplayState",

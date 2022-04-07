@@ -9,10 +9,10 @@
         "description": "Gets a boolean value indicating whether the form data has been modified.",
         "body": "formContext.data.getIsDirty();"
     },
-    "Data Get Is Valid": {
-        "prefix": "FormContextDataGetIsValid",
+    "Data Is Valid": {
+        "prefix": "FormContextDataIsValid",
         "description": "Gets a boolean value indicating whether all of the form data is valid. This includes the main entity and any unbound attributes.",
-        "body": "formContext.data.getIsValid();"
+        "body": "formContext.data.isValid();"
     },
     "Data Refresh": {
         "prefix": "FormContextDataRefresh",
@@ -106,8 +106,18 @@
         "description": "Saves the record synchronously with the options to close the form or open a new form after the save is completed.",
         "body": "formContext.data.entity.save('${1|saveandclose,saveandnew|}');"
     },
+    "Data Process Add On Pre Process Status Change": {
+        "prefix": "FormContextDataProcessAddOnPreProcessStatusChange",
+        "description": "Adds a function as an event handler for the OnPreProcessStatusChange event so that it will be called before the business process flow status changes.",
+        "body": "formContext.data.process.addOnPreProcessStatusChange(${1:myFunction});"
+    },
+    "Data Process Add On Pre Stage Change": {
+        "prefix": "FormContextDataProcessAddOnPreStageChange",
+        "description": "Adds a function as an event handler for the OnPreStageChange event so that it will be called before the business process flow stage changes.",
+        "body": "formContext.data.process.addOnPreStageChange(${1:myFunction});"
+    },
     "Data Process Add On Process Status Change": {
-        "prefix": "FormContextDataProcessddOnProcessStatusChange",
+        "prefix": "FormContextDataProcessAddOnProcessStatusChange",
         "description": "Adds a function as an event handler for the OnProcessStatusChange event so that it will be called when the business process flow status changes.",
         "body": "formContext.data.process.addOnProcessStatusChange(${1:myFunction});"
     },
@@ -120,6 +130,16 @@
         "prefix": "FormContextDataProcessAddOnStageSelected",
         "description": "Adds a function as an event handler for the OnStageSelected event so that it will be called when a business process flow stage is selected.",
         "body": "formContext.data.process.addOnStageSelected(${1:myFunction});"
+    },
+    "Data Process Remove On Pre Process Status Change": {
+        "prefix": "FormContextDataProcessRemoveOnPreProcessStatusChange",
+        "description": "Removes an event handler from the OnPreProcessStatusChange event.",
+        "body": "formContext.data.process.removeOnPreProcessStatusChange(${1:myFunction});"
+    },
+    "Data Process Remove On Pre Stage Change": {
+        "prefix": "FormContextDataProcessRemoveOnPreStageChange",
+        "description": "Removes an event handler from the OnPreStageChange event.",
+        "body": "formContext.data.process.removeOnPreStageChange(${1:myFunction});"
     },
     "Data Process Remove On Process Status Change": {
         "prefix": "FormContextDataProcessRemoveOnProcessStatusChange",

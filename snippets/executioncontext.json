@@ -29,10 +29,25 @@
         "description": "Sets the value of a variable to be used by a handler after the current handler completes.",
         "body": "executionContext.setSharedVariable(${1:key}, ${2:value});"
     },
+    "Get Entity Reference": {
+        "prefix": "ExecutionContextGetEntityReference",
+        "description": "Use this method to know information about a table being saved/updated. It returns table ID, and table name if success.",
+        "body": "executionContext.getEventArgs().getEntityReference();"
+    },
+    "Get Is Save Success": {
+        "prefix": "ExecutionContextGetIsSaveSuccess",
+        "description": "Use this method to know whether the OnSave operation is successful or failed.",
+        "body": "executionContext.getEventArgs().getIsSaveSuccess();"
+    },
     "Get Save Mode": {
         "prefix": "ExecutionContextGetSaveMode",
         "description": "Returns a value indicating how the save event was initiated by the user.",
         "body": "executionContext.getEventArgs().getSaveMode();"
+    },
+    "Get Save Error Info": {
+        "prefix": "ExecutionContextGetSaveErrorInfo",
+        "description": "Use this method to know the error details on why a table save failed.",
+        "body": "executionContext.getEventArgs().getSaveErrorInfo();"
     },
     "Is Default Prevented": {
         "prefix": "ExecutionContextIsDefaultPrevented",
@@ -43,5 +58,10 @@
         "prefix": "ExecutionContextPreventDefault",
         "description": "Cancels the save operation, but all remaining handlers for the event will still be executed.",
         "body": "executionContext.getEventArgs().preventDefault();"
+    },
+    "Prevent Default On Error": {
+        "prefix": "ExecutionContextPreventDefaultOnError",
+        "description": "Cancels the save operation if the event handler has a script error, returns a rejected promise for an async event handler or the operation times out.",
+        "body": "executionContext.getEventArgs().preventDefaultOnError();"
     }
 }
