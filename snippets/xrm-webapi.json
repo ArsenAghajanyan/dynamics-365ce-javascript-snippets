@@ -67,7 +67,7 @@
         "prefix": "XrmWebApiUpdateRecord",
         "description": "Updates an entity record.",
         "body": [
-            "Xrm.WebApi.createRecord('${1:account}', ${2:id}, ${3:data}).then(",
+            "Xrm.WebApi.updateRecord('${1:account}', ${2:id}, ${3:data}).then(",
             "\tfunction success(result) {",
             "\t\t// perform operations on record update",
             "\t\t$0",
