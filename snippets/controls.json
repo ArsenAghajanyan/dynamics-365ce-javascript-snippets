@@ -57,10 +57,15 @@
             "});"
         ]
     },
-    "Control Add On Lookup Tag Click ": {
-        "prefix": "FormContextControlAddOnLookupTagClick ",
+    "Control Add On Lookup Tag Click": {
+        "prefix": "FormContextControlAddOnLookupTagClick",
         "description": "Adds an event handler to the OnLookupTagClick event.",
         "body": "formContext.getControl('${1:fieldName}').addOnLookupTagClick(${2:myFunction});"
+    },
+    "Control Add On Output Change": {
+        "prefix": "FormContextControlAddOnOutputChange",
+        "description": "Adds an event handler to the OnOutputChange event.",
+        "body": "formContext.getControl('${1:fieldName}').addOnOutputChange(${2:myFunction});"
     },
     "Control Add On Post Search": {
         "prefix": "FormContextControlAddOnPostSearch",
@@ -164,6 +169,11 @@
         "description": "Returns an array of option objects representing valid options available for a control, including a blank option and excluding any options that have been removed from the control using removeOption.",
         "body": "formContext.getControl('${1:fieldName}').getOptions();"
     },
+    "Control Get Outputs": {
+        "prefix": "FormContextControlGetOutputs",
+        "description": "Returns a dictionary of the output properties of the control.",
+        "body": "formContext.getControl('${1:fieldName}').getOutputs();"
+    },
     "Control Get Parent": {
         "prefix": "FormContextControlGetParent",
         "description": "Returns a reference to the section object that contains the control.",
@@ -223,6 +233,11 @@
         "prefix": "FormContextControlRemoveOnLookupTagClick",
         "description": "Removes an event handler from the OnLookupTagClick event.",
         "body": "formContext.getControl('${1:fieldName}').removeOnLookupTagClick(${2:myFunction});"
+    },
+    "Control Remove On Output Change": {
+        "prefix": "FormContextControlRemoveOnOutputChange",
+        "description": "Removes an event handler from the OnOutputChange event.",
+        "body": "formContext.getControl('${1:fieldName}').removeOnOutputChange(${2:myFunction});"
     },
     "Control Remove On Post Search": {
         "prefix": "FormContextControlRemoveOnPostSearch",
