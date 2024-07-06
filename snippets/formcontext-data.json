@@ -56,6 +56,11 @@
             ");"
         ]
     },
+    "Data Entity Add On Post Save": {
+        "prefix": "FormContextDataEntityAddOnPostSave",
+        "description": "Adds an event handler to the PostSave Event event.",
+        "body": "formContext.data.entity.addOnPostSave(${1:myFunction});"
+    },
     "Data Entity Add On Save": {
         "prefix": "FormContextDataEntityAddOnSave",
         "description": "Adds a function to be called when the record is saved.",
@@ -96,9 +101,14 @@
         "description": "Gets a boolean value indicating whether all of the entity data is valid.",
         "body": "formContext.data.entity.isValid();"
     },
+    "Data Entity Remove On Post Save": {
+        "prefix": "FormContextDataEntityRemoveOnPostSave",
+        "description": "Removes an event handler from the PostSave Event event.",
+        "body": "formContext.data.entity.removeOnPostSave(${1:myFunction});"
+    },
     "Data Entity Remove On Save": {
         "prefix": "FormContextDataEntityRemoveOnSave",
-        "description": "Removes a function to be called when form data is loaded.",
+        "description": "Removes a function to be called when the record is saved.",
         "body": "formContext.data.entity.removeOnSave(${1:myFunction});"
     },
     "Data Entity Save": {
